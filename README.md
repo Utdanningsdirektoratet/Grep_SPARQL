@@ -2,7 +2,7 @@
 > Alle fastsatte læreplaner i Kunnskapsløftet (LK06 og LK20) ligger i Grep. 
 > I tillegg finnes kodeverk og informasjon om fag i grunnskole og videregående opplæring (vgo), 
 > inkludert vurderingsordninger, samt fag- og vitnemålsmerknader til bruk i dokumentasjon av opplæringen.
-# Utvikling av Greps SPARQ-endepunkt
+# Utvikling av Greps SPARQL-endepunkt
 ## Pågående prosjekt høsten 2020
 Tirsdag 29. september hadde vi en kick-off med de utvklerne som har fått oppdraget med å utvikle det nye SPARQL-endepunktet for Grep, og som vi håper å kunne sette i produksjon i løpet av november. Prosjektet går som planlagt, og vi kan nå invitere interesserte i å prøve dette i et testmiljø vi har kalt "[Sandkassen](https://sandkasse-data.udir.no:7200/sparql)".
 ### Virtuoso ut, GrpahDB inn
