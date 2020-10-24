@@ -16,6 +16,6 @@ You are allowed to copy and make available, change and/or merge data sets descri
 Note in particular the following:
 * Norwegian Directorate for Education and Training assumes no liability for consequences of errors in the data/system.
 * Norwegian Directorate for Education and Training should be provided as source, using data from the service as follows:
-"Contains data under [NLOD](http://data.norge.no/nlod/no), made available on [data.udir.no](https://www.udir.no/om-udir/data/)"
+"Contains data under [NLOD](https://data.norge.no/nlod/en/2.0/), made available on [data.udir.no](https://www.udir.no/om-udir/data/)"
 * You are free to design, but the Directorate for Education and Trainin's logo shall not be used if there is no specific agreement about it.
 * The data should not be presented in a way that appears to be deceptive, nor distorted or manufactured improperly.
