@@ -6,7 +6,7 @@ Vi skal dokumentere dette mer nøye senere, men vi kan ta med noen punkter aller
 ## @Context
 Alle .jsonld-filer hos oss, starter med en @context-blokk.
 Kort fortalt blir context brukt til å mappe termer til IRI-er.
-I [JSON-LD-dokumentasjonen til W3C](https://w3c.github.io/json-ld-syntax/#the-context), forklarees det slik:
+I [JSON-LD-dokumentasjonen til W3C](https://w3c.github.io/json-ld-syntax/#the-context), forklares det slik:
 > *Når to personer kommuniserer med hverandre, foregår samtalen i et delt miljø, vanligvis kalt "konversasjonens kontekst". Denne delte konteksten gjør det mulig for enkeltpersoner å bruke snarveiuttrykk, som f.eks fornavnet til en felles venn, for å kommunisere raskere, men uten å miste nøyaktighet. En kontekst i JSON-LD fungerer på samme måte. Det tillater to applikasjoner å bruke snarveiuttrykk for å kommunisere med hverandre mer effektivt, men uten å miste nøyaktighet.*
 
 ### Eksempel på @context hos oss:
@@ -39,7 +39,7 @@ Vi endret uri til uriId, og grep-type til grepType.
 Videre la vi tilbake uri og grep-type som en "@type".
 Dette gjør at GraphDB heller lager koblinger på grepType og uriId, slik at vi får beholde grep-type og uri som attributter på typene.
 
-Husk at våre .jsonld-fileer er laget spesifikt for at de skal fungere som direkte kilde til GraphDBs triple store.
+Husk at våre .jsonld-filer er laget spesifikt for at de skal fungere som direkte kilde til GraphDBs triple store.
 
 ## Forflatning og løfting
 Et annet avvik (eller skulle vi si, en serie med avvik) fra .json-filene våre er hvordan objektene ({}) er bygd opp.
