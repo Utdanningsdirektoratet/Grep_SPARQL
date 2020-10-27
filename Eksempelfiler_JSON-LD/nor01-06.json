@@ -1,0 +1,865 @@
+{
+  "id": "c4c70d0a-8c21-49f4-9298-7113231bb8e2",
+  "kode": "NOR01-06",
+  "uri": "http://psi.udir.no/kl06/NOR01-06",
+  "url-data": "https://data.udir.no/kl06/v201906/laereplaner-lk20/NOR01-06",
+  "tittel": {
+    "tekst": [
+      {
+        "spraak": "default",
+        "verdi": "Læreplan i norsk"
+      },
+      {
+        "spraak": "nob",
+        "verdi": "Læreplan i norsk"
+      }
+    ],
+    "forskrift": true
+  },
+  "kortform": [
+    {
+      "spraak": "default",
+      "verdi": "Norsk"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "Norsk"
+    }
+  ],
+  "grep-type": "http://psi.udir.no/ontologi/kl06/laereplan_lk20",
+  "status": "https://data.udir.no/kl06/v201906/status/status_publisert",
+  "sist-endret": "2020-08-21T14:55:21.5562298",
+  "fastsettelsesinformasjon": {
+    "fastsatt-dato": "2019-11-15T00:00:00",
+    "fastsettelsestekst": [
+      {
+        "spraak": "nob",
+        "verdi": "Fastsatt som forskrift av Kunnskapsdepartementet 15.11.2019. \nEksamensordning fastsatt av Kunnskapsdepartementet 29.06.2020."
+      },
+      {
+        "spraak": "default",
+        "verdi": "Fastsatt som forskrift av Kunnskapsdepartementet 15.11.2019. \nEksamensordning fastsatt av Kunnskapsdepartementet 29.06.2020."
+      }
+    ],
+    "fastsatt-spraak": {
+      "kode": "nob",
+      "uri": "http://psi.udir.no/kl06/nob",
+      "url-data": "https://data.udir.no/kl06/v201906/spraak/nob",
+      "tittel": "Bokmål",
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "id": "http://psi.oasis-open.org/iso/639/#nob",
+      "grep-type": "http://psi.udir.no/ontologi/kl06/spraak",
+      "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+    },
+    "fastsatt-dato-overskrift": null
+  },
+  "fagtype": [
+    {
+      "kode": "fagtype_grunnskolefag",
+      "uri": "http://psi.udir.no/kl06/fagtype_grunnskolefag",
+      "url-data": "https://data.udir.no/kl06/v201906/fagtyper/fagtype_grunnskolefag",
+      "tittel": "Grunnskolefag",
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "id": "http://psi.udir.no/ontologi/grunnskolefag",
+      "grep-type": "http://psi.udir.no/ontologi/kl06/fagtype",
+      "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+    },
+    {
+      "kode": "fagtype_fellesfag",
+      "uri": "http://psi.udir.no/kl06/fagtype_fellesfag",
+      "url-data": "https://data.udir.no/kl06/v201906/fagtyper/fagtype_fellesfag",
+      "tittel": "Fellesfag",
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "id": "http://psi.udir.no/ontologi/fellesfag",
+      "grep-type": "http://psi.udir.no/ontologi/kl06/fagtype",
+      "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+    }
+  ],
+  "tilgjengelige-spraak": [
+    {
+      "kode": "nob",
+      "uri": "http://psi.udir.no/kl06/nob",
+      "url-data": "https://data.udir.no/kl06/v201906/spraak/nob",
+      "tittel": "Bokmål",
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "id": "http://psi.oasis-open.org/iso/639/#nob",
+      "grep-type": "http://psi.udir.no/ontologi/kl06/spraak",
+      "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+    }
+  ],
+  "opplaeringsnivaa": [
+    {
+      "kode": "opplaeringsnivaa_grunnskole",
+      "uri": "http://psi.udir.no/kl06/opplaeringsnivaa_grunnskole",
+      "url-data": "https://data.udir.no/kl06/v201906/opplaeringsnivaa/opplaeringsnivaa_grunnskole",
+      "tittel": "Grunnskole",
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "id": "http://psi.udir.no/ontologi/opplaeringsnivaa_grunnskole",
+      "grep-type": "http://psi.udir.no/ontologi/kl06/opplaeringsnivaa",
+      "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+    },
+    {
+      "kode": "opplaeringsnivaa_videregaaende",
+      "uri": "http://psi.udir.no/kl06/opplaeringsnivaa_videregaaende",
+      "url-data": "https://data.udir.no/kl06/v201906/opplaeringsnivaa/opplaeringsnivaa_videregaaende",
+      "tittel": "Videregående opplæring",
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "id": "http://psi.udir.no/ontologi/opplaeringsnivaa_videregaaende",
+      "grep-type": "http://psi.udir.no/ontologi/kl06/opplaeringsnivaa",
+      "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+    }
+  ],
+  "gyldighetsperiode": {
+    "gyldig-fra": {
+      "overskrift": [
+        {
+          "spraak": "default",
+          "verdi": "Gjelder fra <>"
+        },
+        {
+          "spraak": "nob",
+          "verdi": "Gjelder fra <>"
+        },
+        {
+          "spraak": "eng",
+          "verdi": "Valid from"
+        },
+        {
+          "spraak": "sme",
+          "verdi": "Gusto <> rájes"
+        },
+        {
+          "spraak": "sma",
+          "verdi": "Faamosne <> raejeste"
+        },
+        {
+          "spraak": "smj",
+          "verdi": "Fámon <> rájes"
+        },
+        {
+          "spraak": "nno",
+          "verdi": "Gjeld frå <>"
+        }
+      ],
+      "dato": "2020-08-01T00:00:00"
+    },
+    "gyldig-til": {
+      "overskrift": [
+        {
+          "spraak": "default",
+          "verdi": "Gjelder til<>"
+        },
+        {
+          "spraak": "nob",
+          "verdi": "Gjelder til <>"
+        },
+        {
+          "spraak": "eng",
+          "verdi": "Valid to"
+        },
+        {
+          "spraak": "sme",
+          "verdi": "Gusto <> rádjái"
+        },
+        {
+          "spraak": "sma",
+          "verdi": "Faamosne <> raaajan"
+        },
+        {
+          "spraak": "smj",
+          "verdi": "Fámon <> rádjáj"
+        },
+        {
+          "spraak": "nno",
+          "verdi": "Gjeld til <>"
+        }
+      ],
+      "dato": null
+    }
+  },
+  "erstatter": [
+    {
+      "kode": "NOR1-05",
+      "uri": "http://psi.udir.no/kl06/NOR1-05",
+      "url-data": "https://data.udir.no/kl06/v201906/laereplaner/NOR1-05",
+      "tittel": "Læreplan i norsk",
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "id": "uuid:417043f1-45bb-479f-8dd1-d85e97ab2ce1",
+      "grep-type": "http://psi.udir.no/ontologi/kl06/laereplan",
+      "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+    }
+  ],
+  "erstattes-av": [],
+  "siste-eksamen": null,
+  "merkelapper": [],
+  "om-faget-kapittel": {
+    "overskrift": {
+      "tekst": [
+        {
+          "spraak": "default",
+          "verdi": "Om faget"
+        },
+        {
+          "spraak": "nob",
+          "verdi": "Om faget"
+        }
+      ],
+      "forskrift": true
+    },
+    "fagets-relevans-og-verdier": {
+      "overskrift": {
+        "tekst": [
+          {
+            "spraak": "default",
+            "verdi": "Fagets relevans og sentrale verdier"
+          },
+          {
+            "spraak": "nob",
+            "verdi": "Fagets relevans og sentrale verdier"
+          }
+        ],
+        "forskrift": true
+      },
+      "fagets-relevans": {
+        "beskrivelse": {
+          "tekst": [
+            {
+              "spraak": "default",
+              "verdi": "<p>Norsk er et sentralt fag for kulturforst&aring;else, kommunikasjon, danning og identitetsutvikling. Faget skal gi elevene tilgang til kulturens tekster, sjangre og spr&aring;klige mangfold og skal bidra til at de utvikler spr&aring;k for &aring; tenke, kommunisere og l&aelig;re. Faget norsk skal ruste elevene til &aring; delta i demokratiske prosesser og skal forberede dem p&aring; et arbeidsliv som stiller krav om variert kompetanse i lesing, skriving og muntlig kommunikasjon.</p>"
+            },
+            {
+              "spraak": "nob",
+              "verdi": "<p>Norsk er et sentralt fag for kulturforst&aring;else, kommunikasjon, danning og identitetsutvikling. Faget skal gi elevene tilgang til kulturens tekster, sjangre og spr&aring;klige mangfold og skal bidra til at de utvikler spr&aring;k for &aring; tenke, kommunisere og l&aelig;re. Faget norsk skal ruste elevene til &aring; delta i demokratiske prosesser og skal forberede dem p&aring; et arbeidsliv som stiller krav om variert kompetanse i lesing, skriving og muntlig kommunikasjon.</p>"
+            }
+          ],
+          "forskrift": true
+        },
+        "forklaring": []
+      },
+      "verdier-og-prinsipper": {
+        "beskrivelse": {
+          "tekst": [
+            {
+              "spraak": "default",
+              "verdi": "<p>Alle fag skal bidra til &aring; realisere verdigrunnlaget for oppl&aelig;ringen. Faget norsk skal gi elevene innsikt i den rike og mangfoldige spr&aring;k- og kulturarven i Norge. Gjennom arbeid med faget norsk skal elevene bli trygge spr&aring;kbrukere og bevisste p&aring; sin egen spr&aring;klige og kulturelle identitet innenfor et inkluderende fellesskap der flerspr&aring;klighet blir verdsatt som en ressurs. Faget skal styrke elevenes evne til kritisk tenkning og skal ruste dem til &aring; delta i samfunnet gjennom en utforskende og kritisk tiln&aelig;rming til spr&aring;k og tekst. Norskfaget skal gi elevene litter&aelig;re opplevelser og mulighet til &aring; uttrykke seg kreativt og skapende. Lesing av skj&oslash;nnlitteratur og sakprosa skal gi elevene mulighet til &aring; reflektere over sentrale verdier og moralske sp&oslash;rsm&aring;l og bidra til at de f&aring;r respekt for menneskeverdet og for naturen.</p>"
+            },
+            {
+              "spraak": "nob",
+              "verdi": "<p>Alle fag skal bidra til &aring; realisere verdigrunnlaget for oppl&aelig;ringen. Faget norsk skal gi elevene innsikt i den rike og mangfoldige spr&aring;k- og kulturarven i Norge. Gjennom arbeid med faget norsk skal elevene bli trygge spr&aring;kbrukere og bevisste p&aring; sin egen spr&aring;klige og kulturelle identitet innenfor et inkluderende fellesskap der flerspr&aring;klighet blir verdsatt som en ressurs. Faget skal styrke elevenes evne til kritisk tenkning og skal ruste dem til &aring; delta i samfunnet gjennom en utforskende og kritisk tiln&aelig;rming til spr&aring;k og tekst. Norskfaget skal gi elevene litter&aelig;re opplevelser og mulighet til &aring; uttrykke seg kreativt og skapende. Lesing av skj&oslash;nnlitteratur og sakprosa skal gi elevene mulighet til &aring; reflektere over sentrale verdier og moralske sp&oslash;rsm&aring;l og bidra til at de f&aring;r respekt for menneskeverdet og for naturen.</p>"
+            }
+          ],
+          "forskrift": true
+        },
+        "forklaring": []
+      }
+    },
+    "kjerneelementer-i-faget": {
+      "overskrift": {
+        "tekst": [
+          {
+            "spraak": "default",
+            "verdi": "Kjerneelementer"
+          },
+          {
+            "spraak": "nob",
+            "verdi": "Kjerneelementer"
+          }
+        ],
+        "forskrift": true
+      },
+      "kjerneelementer": [
+        {
+          "kode": "KE105",
+          "uri": "http://psi.udir.no/kl06/KE105",
+          "url-data": "https://data.udir.no/kl06/v201906/kjerneelementer-lk20/KE105",
+          "tittel": "Tekst i kontekst",
+          "gyldighet": {
+            "gyldig-fra": null,
+            "gyldig-til": null
+          },
+          "id": "1d54ce71-b2ef-49eb-923c-808fd297e2ff",
+          "grep-type": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20",
+          "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+        },
+        {
+          "kode": "KE106",
+          "uri": "http://psi.udir.no/kl06/KE106",
+          "url-data": "https://data.udir.no/kl06/v201906/kjerneelementer-lk20/KE106",
+          "tittel": "Kritisk tilnærming til tekst",
+          "gyldighet": {
+            "gyldig-fra": null,
+            "gyldig-til": null
+          },
+          "id": "657d0cde-63e3-4f21-bdb0-7242814a2e4a",
+          "grep-type": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20",
+          "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+        },
+        {
+          "kode": "KE107",
+          "uri": "http://psi.udir.no/kl06/KE107",
+          "url-data": "https://data.udir.no/kl06/v201906/kjerneelementer-lk20/KE107",
+          "tittel": "Muntlig kommunikasjon",
+          "gyldighet": {
+            "gyldig-fra": null,
+            "gyldig-til": null
+          },
+          "id": "5c654306-1b70-4595-a51c-d6e82bab589e",
+          "grep-type": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20",
+          "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+        },
+        {
+          "kode": "KE108",
+          "uri": "http://psi.udir.no/kl06/KE108",
+          "url-data": "https://data.udir.no/kl06/v201906/kjerneelementer-lk20/KE108",
+          "tittel": "Skriftlig tekstskaping",
+          "gyldighet": {
+            "gyldig-fra": null,
+            "gyldig-til": null
+          },
+          "id": "6a1aa435-db8e-4f0c-b820-caeabf1a9de1",
+          "grep-type": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20",
+          "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+        },
+        {
+          "kode": "KE109",
+          "uri": "http://psi.udir.no/kl06/KE109",
+          "url-data": "https://data.udir.no/kl06/v201906/kjerneelementer-lk20/KE109",
+          "tittel": "Språket som system og mulighet",
+          "gyldighet": {
+            "gyldig-fra": null,
+            "gyldig-til": null
+          },
+          "id": "bd3eb017-2c6d-43f9-b51b-68f5e43f508d",
+          "grep-type": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20",
+          "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+        },
+        {
+          "kode": "KE110",
+          "uri": "http://psi.udir.no/kl06/KE110",
+          "url-data": "https://data.udir.no/kl06/v201906/kjerneelementer-lk20/KE110",
+          "tittel": "Språklig mangfold",
+          "gyldighet": {
+            "gyldig-fra": null,
+            "gyldig-til": null
+          },
+          "id": "55f2f277-de9b-430c-8479-81609f9aee2f",
+          "grep-type": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20",
+          "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+        }
+      ]
+    },
+    "tverrfaglige-temaer-i-faget": {
+      "overskrift": {
+        "tekst": [
+          {
+            "spraak": "default",
+            "verdi": "Tverrfaglige temaer"
+          },
+          {
+            "spraak": "nob",
+            "verdi": "Tverrfaglige temaer"
+          }
+        ],
+        "forskrift": true
+      },
+      "tverrfaglige-temaer": [
+        {
+          "overskrift": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "Folkehelse og livsmestring"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "Folkehelse og livsmestring"
+              }
+            ],
+            "forskrift": true
+          },
+          "beskrivelse": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "<p>I norsk handler det tverrfaglige temaet folkehelse og livsmestring om &aring; utvikle elevenes evne til &aring; uttrykke seg skriftlig og muntlig. Dette gir elevene grunnlag for &aring; kunne gi uttrykk for egne f&oslash;lelser, tanker og erfaringer, noe som er viktig for &aring; h&aring;ndtere relasjoner og delta i et sosialt fellesskap. Lesing av skj&oslash;nnlitteratur og sakprosa kan b&aring;de bekrefte og utfordre elevenes selvbilde og dermed bidra til deres identitetsutvikling og livsmestring.</p>"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "<p>I norsk handler det tverrfaglige temaet folkehelse og livsmestring om &aring; utvikle elevenes evne til &aring; uttrykke seg skriftlig og muntlig. Dette gir elevene grunnlag for &aring; kunne gi uttrykk for egne f&oslash;lelser, tanker og erfaringer, noe som er viktig for &aring; h&aring;ndtere relasjoner og delta i et sosialt fellesskap. Lesing av skj&oslash;nnlitteratur og sakprosa kan b&aring;de bekrefte og utfordre elevenes selvbilde og dermed bidra til deres identitetsutvikling og livsmestring.</p>"
+              }
+            ],
+            "forskrift": true
+          },
+          "forklaring": [],
+          "referanse": {
+            "kode": "TT1",
+            "uri": "http://psi.udir.no/kl06/TT1",
+            "url-data": "https://data.udir.no/kl06/v201906/tverrfaglige-temaer-lk20/TT1",
+            "tittel": "Folkehelse og livsmestring",
+            "gyldighet": {
+              "gyldig-fra": null,
+              "gyldig-til": null
+            },
+            "id": "4fbd99bd-0e3f-48b7-9de2-86086c50d5fc",
+            "grep-type": "http://psi.udir.no/ontologi/kl06/tverrfaglig_tema_lk20",
+            "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+          }
+        },
+        {
+          "overskrift": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "Demokrati og medborgerskap"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "Demokrati og medborgerskap"
+              }
+            ],
+            "forskrift": true
+          },
+          "beskrivelse": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "<p>I norsk handler det tverrfaglige temaet demokrati og medborgerskap om &aring; utvikle elevenes muntlige og skriftlige retoriske ferdigheter, slik at de kan gi uttrykk for egne tanker og meninger og delta i samfunnsliv og demokratiske prosesser. Gjennom kritisk arbeid med tekster og ytringer &oslash;ver elevene opp evnen til kritisk tenkning og l&aelig;rer seg &aring; h&aring;ndtere meningsbrytninger gjennom refleksjon, dialog og diskusjon. Lesing av skj&oslash;nnlitteratur og sakprosa gir elevene innblikk i andre menneskers livssituasjon og utfordringer. Dette kan bidra til at de utvikler forst&aring;else, toleranse og respekt for andre menneskers synspunkter og perspektiver, og det kan legge grunnlag for konstruktiv samhandling.&nbsp;</p>"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "<p>I norsk handler det tverrfaglige temaet demokrati og medborgerskap om &aring; utvikle elevenes muntlige og skriftlige retoriske ferdigheter, slik at de kan gi uttrykk for egne tanker og meninger og delta i samfunnsliv og demokratiske prosesser. Gjennom kritisk arbeid med tekster og ytringer &oslash;ver elevene opp evnen til kritisk tenkning og l&aelig;rer seg &aring; h&aring;ndtere meningsbrytninger gjennom refleksjon, dialog og diskusjon. Lesing av skj&oslash;nnlitteratur og sakprosa gir elevene innblikk i andre menneskers livssituasjon og utfordringer. Dette kan bidra til at de utvikler forst&aring;else, toleranse og respekt for andre menneskers synspunkter og perspektiver, og det kan legge grunnlag for konstruktiv samhandling.&nbsp;</p>"
+              }
+            ],
+            "forskrift": true
+          },
+          "forklaring": [],
+          "referanse": {
+            "kode": "TT2",
+            "uri": "http://psi.udir.no/kl06/TT2",
+            "url-data": "https://data.udir.no/kl06/v201906/tverrfaglige-temaer-lk20/TT2",
+            "tittel": "Demokrati og medborgerskap",
+            "gyldighet": {
+              "gyldig-fra": null,
+              "gyldig-til": null
+            },
+            "id": "18db0afa-5d3d-4719-9e48-4bcc10489238",
+            "grep-type": "http://psi.udir.no/ontologi/kl06/tverrfaglig_tema_lk20",
+            "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+          }
+        },
+        {
+          "overskrift": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "Bærekraftig utvikling"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "Bærekraftig utvikling"
+              }
+            ],
+            "forskrift": true
+          },
+          "beskrivelse": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "<p>I norsk handler det tverrfaglige temaet b&aelig;rekraftig utvikling om at elevene skal utvikle kunnskap om hvordan tekster framstiller natur, milj&oslash; og livsbetingelser, lokalt og globalt. Gjennom &aring; m&oslash;te fagets tekstmangfold, lese kritisk og delta i dialog kan elevene utvikle evnen til &aring; forst&aring; og h&aring;ndtere meningsmotsetninger og interessekonflikter som kan oppst&aring; n&aring;r samfunnet endres i en mer b&aelig;rekraftig retning. Faget norsk bidrar til &aring; bevisstgj&oslash;re elevene og ruste dem til &aring; handle og p&aring;virke samfunnet gjennom spr&aring;ket.</p>"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "<p>I norsk handler det tverrfaglige temaet b&aelig;rekraftig utvikling om at elevene skal utvikle kunnskap om hvordan tekster framstiller natur, milj&oslash; og livsbetingelser, lokalt og globalt. Gjennom &aring; m&oslash;te fagets tekstmangfold, lese kritisk og delta i dialog kan elevene utvikle evnen til &aring; forst&aring; og h&aring;ndtere meningsmotsetninger og interessekonflikter som kan oppst&aring; n&aring;r samfunnet endres i en mer b&aelig;rekraftig retning. Faget norsk bidrar til &aring; bevisstgj&oslash;re elevene og ruste dem til &aring; handle og p&aring;virke samfunnet gjennom spr&aring;ket.</p>"
+              }
+            ],
+            "forskrift": true
+          },
+          "forklaring": [],
+          "referanse": {
+            "kode": "TT3",
+            "uri": "http://psi.udir.no/kl06/TT3",
+            "url-data": "https://data.udir.no/kl06/v201906/tverrfaglige-temaer-lk20/TT3",
+            "tittel": "Bærekraftig utvikling",
+            "gyldighet": {
+              "gyldig-fra": null,
+              "gyldig-til": null
+            },
+            "id": "e95e45b3-1b14-46b7-81b4-98968a9f67bf",
+            "grep-type": "http://psi.udir.no/ontologi/kl06/tverrfaglig_tema_lk20",
+            "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+          }
+        }
+      ]
+    },
+    "grunnleggende-ferdigheter-i-faget": {
+      "overskrift": {
+        "tekst": [
+          {
+            "spraak": "default",
+            "verdi": "Grunnleggende ferdigheter"
+          },
+          {
+            "spraak": "nob",
+            "verdi": "Grunnleggende ferdigheter"
+          }
+        ],
+        "forskrift": true
+      },
+      "grunnleggende-ferdigheter": [
+        {
+          "overskrift": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "Muntlige ferdigheter"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "Muntlige ferdigheter"
+              }
+            ],
+            "forskrift": true
+          },
+          "beskrivelse": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "<p>Muntlige ferdigheter i norsk er &aring; kunne samhandle med andre gjennom &aring; lytte, fortelle og samtale. Det inneb&aelig;rer &aring; bruke retoriske ferdigheter og &aring; uttrykke seg hensiktsmessig i ulike spontane og forberedte kommunikasjonssituasjoner, inkludert &aring; kunne planlegge og framf&oslash;re ulike typer muntlige presentasjoner tilpasset mottakerne. Norsk har et s&aelig;rlig ansvar for utviklingen av muntlige ferdigheter. Utviklingen av muntlige ferdigheter i norsk g&aring;r fra tidlig samhandling i lek og faglige aktiviteter til &aring; bruke det muntlige spr&aring;ket stadig mer presist og nyansert i ulike norskfaglige samtaler og presentasjoner.</p><p><br></p>"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "<p>Muntlige ferdigheter i norsk er &aring; kunne samhandle med andre gjennom &aring; lytte, fortelle og samtale. Det inneb&aelig;rer &aring; bruke retoriske ferdigheter og &aring; uttrykke seg hensiktsmessig i ulike spontane og forberedte kommunikasjonssituasjoner, inkludert &aring; kunne planlegge og framf&oslash;re ulike typer muntlige presentasjoner tilpasset mottakerne. Norsk har et s&aelig;rlig ansvar for utviklingen av muntlige ferdigheter. Utviklingen av muntlige ferdigheter i norsk g&aring;r fra tidlig samhandling i lek og faglige aktiviteter til &aring; bruke det muntlige spr&aring;ket stadig mer presist og nyansert i ulike norskfaglige samtaler og presentasjoner.</p><p><br></p>"
+              }
+            ],
+            "forskrift": true
+          },
+          "forklaring": [],
+          "referanse": {
+            "kode": "GF1",
+            "uri": "http://psi.udir.no/kl06/GF1",
+            "url-data": "https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF1",
+            "tittel": "Muntlige ferdigheter",
+            "gyldighet": {
+              "gyldig-fra": null,
+              "gyldig-til": null
+            },
+            "id": "4c7259cf-0623-4cd3-8745-e02d7bb3ee4b",
+            "grep-type": "http://psi.udir.no/ontologi/kl06/grunnleggende_ferdighet_lk20",
+            "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+          }
+        },
+        {
+          "overskrift": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "Å kunne skrive"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "Å kunne skrive"
+              }
+            ],
+            "forskrift": true
+          },
+          "beskrivelse": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "<p>&Aring; kunne skrive i norsk er &aring; kunne uttrykke seg i et bredt utvalg skj&oslash;nnlitter&aelig;re og sakpregede sjangre. Det inneb&aelig;rer &aring; utvikle personlige skriftlige uttrykksm&aring;ter og &aring; beherske skrivestrategier, rettskriving og oppbygging av tekster. &Aring; skrive er ogs&aring; en m&aring;te &aring; utvikle og strukturere tanker p&aring; og en metode for &aring; l&aelig;re. Norsk har et s&aelig;rlig ansvar for oppl&aelig;ringen i &aring; kunne skrive. Utviklingen av &aring; kunne skrive i norsk g&aring;r fra den grunnleggende skriveoppl&aelig;ringen til &aring; planlegge, utforme og bearbeide tekster i ulike sjangre og tilpasset form&aring;l, medium og mottaker. Skriving i norsk inneb&aelig;rer &aring; uttrykke seg med en stadig st&oslash;rre spr&aring;klig sikkerhet p&aring; b&aring;de hovedm&aring;l og sidem&aring;l.&nbsp;</p><p>Den f&oslash;rste skriveoppl&aelig;ringen skal foreg&aring; p&aring; elevens hovedm&aring;l.</p>"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "<p>&Aring; kunne skrive i norsk er &aring; kunne uttrykke seg i et bredt utvalg skj&oslash;nnlitter&aelig;re og sakpregede sjangre. Det inneb&aelig;rer &aring; utvikle personlige skriftlige uttrykksm&aring;ter og &aring; beherske skrivestrategier, rettskriving og oppbygging av tekster. &Aring; skrive er ogs&aring; en m&aring;te &aring; utvikle og strukturere tanker p&aring; og en metode for &aring; l&aelig;re. Norsk har et s&aelig;rlig ansvar for oppl&aelig;ringen i &aring; kunne skrive. Utviklingen av &aring; kunne skrive i norsk g&aring;r fra den grunnleggende skriveoppl&aelig;ringen til &aring; planlegge, utforme og bearbeide tekster i ulike sjangre og tilpasset form&aring;l, medium og mottaker. Skriving i norsk inneb&aelig;rer &aring; uttrykke seg med en stadig st&oslash;rre spr&aring;klig sikkerhet p&aring; b&aring;de hovedm&aring;l og sidem&aring;l.&nbsp;</p><p>Den f&oslash;rste skriveoppl&aelig;ringen skal foreg&aring; p&aring; elevens hovedm&aring;l.</p>"
+              }
+            ],
+            "forskrift": true
+          },
+          "forklaring": [],
+          "referanse": {
+            "kode": "GF2",
+            "uri": "http://psi.udir.no/kl06/GF2",
+            "url-data": "https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF2",
+            "tittel": "Å kunne skrive",
+            "gyldighet": {
+              "gyldig-fra": null,
+              "gyldig-til": null
+            },
+            "id": "3dd652b3-5531-4daa-917e-5119d42a20ca",
+            "grep-type": "http://psi.udir.no/ontologi/kl06/grunnleggende_ferdighet_lk20",
+            "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+          }
+        },
+        {
+          "overskrift": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "Å kunne lese"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "Å kunne lese"
+              }
+            ],
+            "forskrift": true
+          },
+          "beskrivelse": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "<p>&Aring; kunne lese i norsk inneb&aelig;rer &aring; lese b&aring;de p&aring; papir og digitalt. Det inneb&aelig;rer &aring; kunne lese og reflektere over skj&oslash;nnlitteratur og sakprosa, &aring; beherske lesestrategier tilpasset form&aring;let med lesingen og &aring; kunne vurdere tekster kritisk. Lesing i norsk inneb&aelig;rer ogs&aring; &aring; lese sammensatte tekster som kan inneholde skrift, bilder, tegninger, tall og andre uttrykksformer. Norsk har et s&aelig;rlig ansvar for oppl&aelig;ringen i &aring; kunne lese. Utviklingen av &aring; kunne lese i norsk g&aring;r fra den grunnleggende avkodingen til &aring; lese, tolke og reflektere over tekster i ulike sjangre, for ulike form&aring;l og av ulik lengde og kompleksitet.&nbsp;</p><p>Den f&oslash;rste leseoppl&aelig;ringen skal foreg&aring; p&aring; elevens hovedm&aring;l.</p>"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "<p>&Aring; kunne lese i norsk inneb&aelig;rer &aring; lese b&aring;de p&aring; papir og digitalt. Det inneb&aelig;rer &aring; kunne lese og reflektere over skj&oslash;nnlitteratur og sakprosa, &aring; beherske lesestrategier tilpasset form&aring;let med lesingen og &aring; kunne vurdere tekster kritisk. Lesing i norsk inneb&aelig;rer ogs&aring; &aring; lese sammensatte tekster som kan inneholde skrift, bilder, tegninger, tall og andre uttrykksformer. Norsk har et s&aelig;rlig ansvar for oppl&aelig;ringen i &aring; kunne lese. Utviklingen av &aring; kunne lese i norsk g&aring;r fra den grunnleggende avkodingen til &aring; lese, tolke og reflektere over tekster i ulike sjangre, for ulike form&aring;l og av ulik lengde og kompleksitet.&nbsp;</p><p>Den f&oslash;rste leseoppl&aelig;ringen skal foreg&aring; p&aring; elevens hovedm&aring;l.</p>"
+              }
+            ],
+            "forskrift": true
+          },
+          "forklaring": [],
+          "referanse": {
+            "kode": "GF3",
+            "uri": "http://psi.udir.no/kl06/GF3",
+            "url-data": "https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF3",
+            "tittel": "Å kunne lese",
+            "gyldighet": {
+              "gyldig-fra": null,
+              "gyldig-til": null
+            },
+            "id": "4fbb0383-5b71-449c-963b-6bfe36c99d9f",
+            "grep-type": "http://psi.udir.no/ontologi/kl06/grunnleggende_ferdighet_lk20",
+            "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+          }
+        },
+        {
+          "overskrift": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "Digitale ferdigheter"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "Digitale ferdigheter"
+              }
+            ],
+            "forskrift": true
+          },
+          "beskrivelse": {
+            "tekst": [
+              {
+                "spraak": "default",
+                "verdi": "<p>Digitale ferdigheter i norsk er &aring; kunne finne, vurdere og bruke digitale kilder i arbeid med tekst. Det inneb&aelig;rer &aring; bruke digitale ressurser kreativt til &aring; skape sammensatte tekster og &aring; utvikle kritisk og etisk bevissthet om det &aring; framstille seg selv og andre digitalt. Utviklingen av digitale ferdigheter i norsk g&aring;r fra &aring; lage enkle sammensatte tekster til &aring; planlegge, utvikle og redigere sammensatte tekster basert p&aring; kunnskap om hvordan de forskjellige uttrykksformene virker sammen. Utviklingen inneb&aelig;rer ogs&aring; &aring; vise en stadig st&oslash;rre grad av selvstendighet og d&oslash;mmekraft i valg og bruk av digitale kilder.</p>"
+              },
+              {
+                "spraak": "nob",
+                "verdi": "<p>Digitale ferdigheter i norsk er &aring; kunne finne, vurdere og bruke digitale kilder i arbeid med tekst. Det inneb&aelig;rer &aring; bruke digitale ressurser kreativt til &aring; skape sammensatte tekster og &aring; utvikle kritisk og etisk bevissthet om det &aring; framstille seg selv og andre digitalt. Utviklingen av digitale ferdigheter i norsk g&aring;r fra &aring; lage enkle sammensatte tekster til &aring; planlegge, utvikle og redigere sammensatte tekster basert p&aring; kunnskap om hvordan de forskjellige uttrykksformene virker sammen. Utviklingen inneb&aelig;rer ogs&aring; &aring; vise en stadig st&oslash;rre grad av selvstendighet og d&oslash;mmekraft i valg og bruk av digitale kilder.</p>"
+              }
+            ],
+            "forskrift": true
+          },
+          "forklaring": [],
+          "referanse": {
+            "kode": "GF5",
+            "uri": "http://psi.udir.no/kl06/GF5",
+            "url-data": "https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF5",
+            "tittel": "Digitale ferdigheter",
+            "gyldighet": {
+              "gyldig-fra": null,
+              "gyldig-til": null
+            },
+            "id": "c4dec77c-afed-49c8-ab49-ee36f40d218c",
+            "grep-type": "http://psi.udir.no/ontologi/kl06/grunnleggende_ferdighet_lk20",
+            "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+          }
+        }
+      ]
+    }
+  },
+  "kompetansemaal-kapittel": {
+    "overskrift": {
+      "tekst": [
+        {
+          "spraak": "default",
+          "verdi": "Kompetansemål og vurdering"
+        },
+        {
+          "spraak": "nob",
+          "verdi": "Kompetansemål og vurdering"
+        }
+      ],
+      "forskrift": true
+    },
+    "kompetansemaalsett": [
+      {
+        "kode": "KV116",
+        "uri": "http://psi.udir.no/kl06/KV116",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV116",
+        "tittel": "Kompetansemål og vurdering 2. trinn",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "6f8cdfbf-6ad9-495a-a47e-92978ff89a85",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV109",
+        "uri": "http://psi.udir.no/kl06/KV109",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV109",
+        "tittel": "Kompetansemål og vurdering 4. trinn",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "eba55f29-3b0a-4cff-8478-dcdad35abeaa",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV110",
+        "uri": "http://psi.udir.no/kl06/KV110",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV110",
+        "tittel": "Kompetansemål og vurdering 7. trinn",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "9cde0ab5-a196-49cf-b8bd-1d5008546a27",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV111",
+        "uri": "http://psi.udir.no/kl06/KV111",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV111",
+        "tittel": "Kompetansemål og vurdering 10. trinn",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "7f236e36-be41-49d3-858d-2d92a97df670",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV112",
+        "uri": "http://psi.udir.no/kl06/KV112",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV112",
+        "tittel": "Kompetansemål og vurdering Vg2 yrkesfaglige utdanningsprogram",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "94ddbaf4-a162-46c2-8031-8ee48840a7b5",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV114",
+        "uri": "http://psi.udir.no/kl06/KV114",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV114",
+        "tittel": "Kompetansemål og vurdering Vg1 studieforberedende utdanningsprogram",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "76bc9cd0-724a-48af-bd8e-60842e5c3025",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV113",
+        "uri": "http://psi.udir.no/kl06/KV113",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV113",
+        "tittel": "Kompetansemål og vurdering Vg2 studieforberedende utdanningsprogram",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "d746f895-7022-406f-aacf-fff23dba02cf",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV115",
+        "uri": "http://psi.udir.no/kl06/KV115",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV115",
+        "tittel": "Kompetansemål og vurdering Vg3 studieforberedende utdanningsprogram",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "6545ed35-62cd-4948-89fc-0dcd2e3d5e7f",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      },
+      {
+        "kode": "KV108",
+        "uri": "http://psi.udir.no/kl06/KV108",
+        "url-data": "https://data.udir.no/kl06/v201906/kompetansemaalsett-lk20/KV108",
+        "tittel": "Kompetansemål og vurdering Vg3 påbygging til generell studiekompetanse ",
+        "gyldighet": {
+          "gyldig-fra": null,
+          "gyldig-til": null
+        },
+        "id": "4534340d-0dc2-48a0-9a29-3d40876010ef",
+        "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+        "status": "https://data.udir.no/kl06/v201906/status/status_publisert"
+      }
+    ]
+  },
+  "vurderingsordning-kapittel": {
+    "overskrift": {
+      "tekst": [
+        {
+          "spraak": "default",
+          "verdi": "Vurderingsordning"
+        },
+        {
+          "spraak": "nob",
+          "verdi": "Vurderingsordning"
+        }
+      ],
+      "forskrift": true
+    },
+    "beskrivelse": {
+      "tekst": [
+        {
+          "spraak": "default",
+          "verdi": "<p><strong>Standpunktvurdering</strong></p><p>10. trinn: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven skal ha én standpunktkarakter.&nbsp;<br>Vg3 studieforberedende utdanningsprogram: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;<br>Vg3 påbygging til generell studiekompetanse: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;</p><p><strong>Eksamen for elever&nbsp;</strong></p><p>10. trinn: Eleven kan trekkes ut til to dagers skriftlig eksamen som omfatter norsk hovedmål og norsk sidemål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven kan trekkes ut til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 studieforberedende utdanningsprogram: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 påbygging til generell studiekompetanse: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. &nbsp;Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.</p><p><strong>Eksamen for privatister</strong></p><p>10. trinn: Se gjeldende ordning for grunnskoleopplæring for voksne.<br>Vg2 yrkesfaglige utdanningsprogram: Privatisten skal opp til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 studieforberedende utdanningsprogram: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 påbygging til generell studiekompetanse: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.&nbsp;</p><p><br></p>"
+        },
+        {
+          "spraak": "nob",
+          "verdi": "<p><strong>Standpunktvurdering</strong></p><p>10. trinn: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven skal ha én standpunktkarakter.&nbsp;<br>Vg3 studieforberedende utdanningsprogram: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;<br>Vg3 påbygging til generell studiekompetanse: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;</p><p><strong>Eksamen for elever&nbsp;</strong></p><p>10. trinn: Eleven kan trekkes ut til to dagers skriftlig eksamen som omfatter norsk hovedmål og norsk sidemål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven kan trekkes ut til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 studieforberedende utdanningsprogram: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 påbygging til generell studiekompetanse: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. &nbsp;Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.</p><p><strong>Eksamen for privatister</strong></p><p>10. trinn: Se gjeldende ordning for grunnskoleopplæring for voksne.<br>Vg2 yrkesfaglige utdanningsprogram: Privatisten skal opp til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 studieforberedende utdanningsprogram: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 påbygging til generell studiekompetanse: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.&nbsp;</p><p><br></p>"
+        }
+      ],
+      "forskrift": true
+    },
+    "forklaring": []
+  },
+  "tilleggsopplysninger": []
+}
