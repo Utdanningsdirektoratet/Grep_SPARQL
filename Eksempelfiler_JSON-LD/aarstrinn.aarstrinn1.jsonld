@@ -1,0 +1,59 @@
+﻿{
+  "@context": {
+    "@vocab": "http://psi.udir.no/ontologi/kl06/",
+    "uriId": "@id",
+    "uri": {
+      "@type": "@id"
+    },
+    "url-data": {
+      "@type": "@id"
+    },
+    "grepType": "@type",
+    "grep-type": {
+      "@type": "@id"
+    },
+    "verdi": "@value",
+    "spraak": "@language",
+    "status": {
+      "@type": "@id"
+    }
+  },
+  "grepType": "http://psi.udir.no/ontologi/kl06/aarstrinn",
+  "uriId": "http://psi.udir.no/kl06/aarstrinn1",
+  "id": "http://psi.udir.no/laereplan/aarstrinn/aarstrinn1",
+  "kode": "aarstrinn1",
+  "uri": "http://psi.udir.no/kl06/aarstrinn1",
+  "url-data": "https://data.udir.no/kl06/v201906/aarstrinn/aarstrinn1",
+  "kortform": [
+    {
+      "spraak": "default",
+      "verdi": "1. trinn"
+    },
+    {
+      "spraak": "nno",
+      "verdi": "1. trinn"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "1. trinn"
+    }
+  ],
+  "tittel": [
+    {
+      "spraak": "nno",
+      "verdi": "Første årstrinn"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "Første årstrinn"
+    },
+    {
+      "spraak": "default",
+      "verdi": "Første årstrinn"
+    }
+  ],
+  "grep-type": "http://psi.udir.no/ontologi/kl06/aarstrinn",
+  "status": "https://data.udir.no/kl06/v201906/status/status_publisert",
+  "numerisk-verdi": 0,
+  "rekkefoelge": 1
+}

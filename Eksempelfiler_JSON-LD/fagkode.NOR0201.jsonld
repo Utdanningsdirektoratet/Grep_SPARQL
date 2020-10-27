@@ -1,0 +1,127 @@
+﻿{
+  "@context": {
+    "@vocab": "http://psi.udir.no/ontologi/kl06/",
+    "uriId": "@id",
+    "uri": {
+      "@type": "@id"
+    },
+    "url-data": {
+      "@type": "@id"
+    },
+    "grepType": "@type",
+    "grep-type": {
+      "@type": "@id"
+    },
+    "verdi": "@value",
+    "spraak": "@language",
+    "status": {
+      "@type": "@id"
+    }
+  },
+  "grepType": "http://psi.udir.no/ontologi/kl06/fagkode",
+  "uriId": "http://psi.udir.no/kl06/NOR0201",
+  "id": "uuid:74f39aff-9241-41ac-8fdd-8db6a416762a",
+  "kode": "NOR0201",
+  "uri": "http://psi.udir.no/kl06/NOR0201",
+  "url-data": "https://data.udir.no/kl06/v201906/fagkoder/NOR0201",
+  "tittel": [
+    {
+      "spraak": "nob",
+      "verdi": "Norsk 1. årstrinn"
+    },
+    {
+      "spraak": "eng",
+      "verdi": "Norwegian"
+    },
+    {
+      "spraak": "sme",
+      "verdi": "Dárogiella 1. jahkeceahkki"
+    },
+    {
+      "spraak": "nno",
+      "verdi": "Norsk 1. årssteg"
+    },
+    {
+      "spraak": "default",
+      "verdi": "Norsk 1. årstrinn"
+    }
+  ],
+  "grep-type": "http://psi.udir.no/ontologi/kl06/fagkode",
+  "status": "https://data.udir.no/kl06/v201906/status/status_publisert",
+  "sist-endret": "2020-06-17T07:48:00.3305213",
+  "merkelapper": [],
+  "opplaeringsfag": [
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1Z21"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1Z29"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1Z37"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1Z47"
+    }
+  ],
+  "benyttes-sammen-med": [],
+  "erstatter": [
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR0001"
+    }
+  ],
+  "erstattes-av": [],
+  "omfang-totalt": null,
+  "omfang-vitnemaal": null,
+  "omfang-til-naa": null,
+  "sensur": null,
+  "oppgave": null,
+  "tilleggsopplysninger": [
+    {
+      "spraak": "nob",
+      "verdi": "1. - 4. årstrinn: 931 årstimer"
+    },
+    {
+      "spraak": "default",
+      "verdi": "1. - 4. årstrinn: 931 årstimer"
+    }
+  ],
+  "bygger-paa-fag": [],
+  "gyldig-fra": "2008-08-01T00:00:00",
+  "gyldig-til": null,
+  "iso-639-2-kode": null,
+  "fagtype": {
+    "uriId": "http://psi.udir.no/kl06/fagtype_grunnskolefag"
+  },
+  "opplaeringsnivaa": {
+    "uriId": "http://psi.udir.no/kl06/opplaeringsnivaa_grunnskole"
+  },
+  "kortform": [
+    {
+      "spraak": "nob",
+      "verdi": "Norsk"
+    },
+    {
+      "spraak": "eng",
+      "verdi": "Norwegian"
+    },
+    {
+      "spraak": "sme",
+      "verdi": "Dárogiella"
+    },
+    {
+      "spraak": "nno",
+      "verdi": "Norsk"
+    },
+    {
+      "spraak": "default",
+      "verdi": "Norsk"
+    }
+  ],
+  "naar-kan-man-ta-eksamen-foerste-semester": null,
+  "naar-kan-man-ta-eksamen-siste-semester": null,
+  "naar-gis-det-undervisning-foerste-semester": {
+    "uriId": "http://psi.udir.no/kl06/semester_hoest_2008"
+  },
+  "naar-gis-det-undervisning-siste-semester": null
+}

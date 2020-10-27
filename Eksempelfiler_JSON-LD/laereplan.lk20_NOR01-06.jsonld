@@ -1,0 +1,200 @@
+﻿{
+  "@context": {
+    "@vocab": "http://psi.udir.no/ontologi/kl06/",
+    "uriId": "@id",
+    "uri": {
+      "@type": "@id"
+    },
+    "url-data": {
+      "@type": "@id"
+    },
+    "grepType": "@type",
+    "grep-type": {
+      "@type": "@id"
+    },
+    "verdi": "@value",
+    "spraak": "@language",
+    "status": {
+      "@type": "@id"
+    }
+  },
+  "grepType": "http://psi.udir.no/ontologi/kl06/laereplan_lk20",
+  "uriId": "http://psi.udir.no/kl06/NOR01-06",
+  "id": "c4c70d0a-8c21-49f4-9298-7113231bb8e2",
+  "kode": "NOR01-06",
+  "uri": "http://psi.udir.no/kl06/NOR01-06",
+  "url-data": "https://data.udir.no/kl06/v201906/laereplaner-lk20/NOR01-06",
+  "kortform": [
+    {
+      "spraak": "default",
+      "verdi": "Norsk"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "Norsk"
+    }
+  ],
+  "grep-type": "http://psi.udir.no/ontologi/kl06/laereplan_lk20",
+  "status": "https://data.udir.no/kl06/v201906/status/status_publisert",
+  "sist-endret": "2020-08-21T14:55:21.5562298",
+  "fagtype": [
+    {
+      "uriId": "http://psi.udir.no/kl06/fagtype_grunnskolefag"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/fagtype_fellesfag"
+    }
+  ],
+  "tilgjengelige-spraak": [
+    {
+      "uriId": "http://psi.udir.no/kl06/nob"
+    }
+  ],
+  "opplaeringsnivaa": [
+    {
+      "uriId": "http://psi.udir.no/kl06/opplaeringsnivaa_grunnskole"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/opplaeringsnivaa_videregaaende"
+    }
+  ],
+  "erstatter": [
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1-05"
+    }
+  ],
+  "erstattes-av": [],
+  "siste-eksamen": null,
+  "merkelapper": [],
+  "tilleggsopplysninger": [],
+  "tittel": [
+    {
+      "spraak": "default",
+      "verdi": "Læreplan i norsk"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "Læreplan i norsk"
+    }
+  ],
+  "fagets-relevans": [
+    {
+      "spraak": "default",
+      "verdi": "<p>Norsk er et sentralt fag for kulturforst&aring;else, kommunikasjon, danning og identitetsutvikling. Faget skal gi elevene tilgang til kulturens tekster, sjangre og spr&aring;klige mangfold og skal bidra til at de utvikler spr&aring;k for &aring; tenke, kommunisere og l&aelig;re. Faget norsk skal ruste elevene til &aring; delta i demokratiske prosesser og skal forberede dem p&aring; et arbeidsliv som stiller krav om variert kompetanse i lesing, skriving og muntlig kommunikasjon.</p>"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "<p>Norsk er et sentralt fag for kulturforst&aring;else, kommunikasjon, danning og identitetsutvikling. Faget skal gi elevene tilgang til kulturens tekster, sjangre og spr&aring;klige mangfold og skal bidra til at de utvikler spr&aring;k for &aring; tenke, kommunisere og l&aelig;re. Faget norsk skal ruste elevene til &aring; delta i demokratiske prosesser og skal forberede dem p&aring; et arbeidsliv som stiller krav om variert kompetanse i lesing, skriving og muntlig kommunikasjon.</p>"
+    }
+  ],
+  "verdier-og-prinsipper": [
+    {
+      "spraak": "default",
+      "verdi": "<p>Alle fag skal bidra til &aring; realisere verdigrunnlaget for oppl&aelig;ringen. Faget norsk skal gi elevene innsikt i den rike og mangfoldige spr&aring;k- og kulturarven i Norge. Gjennom arbeid med faget norsk skal elevene bli trygge spr&aring;kbrukere og bevisste p&aring; sin egen spr&aring;klige og kulturelle identitet innenfor et inkluderende fellesskap der flerspr&aring;klighet blir verdsatt som en ressurs. Faget skal styrke elevenes evne til kritisk tenkning og skal ruste dem til &aring; delta i samfunnet gjennom en utforskende og kritisk tiln&aelig;rming til spr&aring;k og tekst. Norskfaget skal gi elevene litter&aelig;re opplevelser og mulighet til &aring; uttrykke seg kreativt og skapende. Lesing av skj&oslash;nnlitteratur og sakprosa skal gi elevene mulighet til &aring; reflektere over sentrale verdier og moralske sp&oslash;rsm&aring;l og bidra til at de f&aring;r respekt for menneskeverdet og for naturen.</p>"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "<p>Alle fag skal bidra til &aring; realisere verdigrunnlaget for oppl&aelig;ringen. Faget norsk skal gi elevene innsikt i den rike og mangfoldige spr&aring;k- og kulturarven i Norge. Gjennom arbeid med faget norsk skal elevene bli trygge spr&aring;kbrukere og bevisste p&aring; sin egen spr&aring;klige og kulturelle identitet innenfor et inkluderende fellesskap der flerspr&aring;klighet blir verdsatt som en ressurs. Faget skal styrke elevenes evne til kritisk tenkning og skal ruste dem til &aring; delta i samfunnet gjennom en utforskende og kritisk tiln&aelig;rming til spr&aring;k og tekst. Norskfaget skal gi elevene litter&aelig;re opplevelser og mulighet til &aring; uttrykke seg kreativt og skapende. Lesing av skj&oslash;nnlitteratur og sakprosa skal gi elevene mulighet til &aring; reflektere over sentrale verdier og moralske sp&oslash;rsm&aring;l og bidra til at de f&aring;r respekt for menneskeverdet og for naturen.</p>"
+    }
+  ],
+  "kjerneelementer": [
+    {
+      "uriId": "http://psi.udir.no/kl06/KE105"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KE106"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KE107"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KE108"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KE109"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KE110"
+    }
+  ],
+  "tverrfaglige-temaer": [
+    {
+      "uriId": "http://psi.udir.no/kl06/TT1"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/TT2"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/TT3"
+    }
+  ],
+  "grunnleggende-ferdigheter": [
+    {
+      "uriId": "http://psi.udir.no/kl06/GF1"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/GF2"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/GF3"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/GF5"
+    }
+  ],
+  "kompetansemaalsett": [
+    {
+      "uriId": "http://psi.udir.no/kl06/KV116"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV109"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV110"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV111"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV112"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV114"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV113"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV115"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/KV108"
+    }
+  ],
+  "vurderingsordning": [
+    {
+      "spraak": "default",
+      "verdi": "<p><strong>Standpunktvurdering</strong></p><p>10. trinn: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven skal ha én standpunktkarakter.&nbsp;<br>Vg3 studieforberedende utdanningsprogram: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;<br>Vg3 påbygging til generell studiekompetanse: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;</p><p><strong>Eksamen for elever&nbsp;</strong></p><p>10. trinn: Eleven kan trekkes ut til to dagers skriftlig eksamen som omfatter norsk hovedmål og norsk sidemål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven kan trekkes ut til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 studieforberedende utdanningsprogram: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 påbygging til generell studiekompetanse: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. &nbsp;Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.</p><p><strong>Eksamen for privatister</strong></p><p>10. trinn: Se gjeldende ordning for grunnskoleopplæring for voksne.<br>Vg2 yrkesfaglige utdanningsprogram: Privatisten skal opp til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 studieforberedende utdanningsprogram: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 påbygging til generell studiekompetanse: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.&nbsp;</p><p><br></p>"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "<p><strong>Standpunktvurdering</strong></p><p>10. trinn: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven skal ha én standpunktkarakter.&nbsp;<br>Vg3 studieforberedende utdanningsprogram: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;<br>Vg3 påbygging til generell studiekompetanse: Eleven skal ha tre standpunktkarakterer, én i norsk muntlig, én i norsk skriftlig hovedmål og én i norsk skriftlig sidemål.&nbsp;</p><p><strong>Eksamen for elever&nbsp;</strong></p><p>10. trinn: Eleven kan trekkes ut til to dagers skriftlig eksamen som omfatter norsk hovedmål og norsk sidemål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg2 yrkesfaglige utdanningsprogram: Eleven kan trekkes ut til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 studieforberedende utdanningsprogram: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.<br>Vg3 påbygging til generell studiekompetanse: Eleven skal opp til skriftlig eksamen i norsk hovedmål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. &nbsp;Eleven kan også trekkes ut til skriftlig eksamen i norsk sidemål. I tillegg kan eleven trekkes ut til muntlig eksamen med forberedelsesdel. Muntlig eksamen blir utarbeidet og sensurert lokalt.</p><p><strong>Eksamen for privatister</strong></p><p>10. trinn: Se gjeldende ordning for grunnskoleopplæring for voksne.<br>Vg2 yrkesfaglige utdanningsprogram: Privatisten skal opp til skriftlig eksamen i norsk hovedmål. Eksamen skal ha forberedelsesdel. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 studieforberedende utdanningsprogram: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.<br>Vg3 påbygging til generell studiekompetanse: Privatisten skal opp til skriftlig eksamen både i norsk hovedmål og i norsk sidemål. Skriftlig eksamen blir utarbeidet og sensurert sentralt. I tillegg skal privatisten opp til muntlig eksamen. Muntlig eksamen blir utarbeidet og sensurert lokalt. Fylkeskommunen avgjør om privatister skal få forberedelsesdel ved lokalt gitt eksamen.&nbsp;</p><p><br></p>"
+    }
+  ],
+  "fastsatt-dato": "2019-11-15T00:00:00",
+  "fastsettelsestekst": [
+    {
+      "spraak": "nob",
+      "verdi": "Fastsatt som forskrift av Kunnskapsdepartementet 15.11.2019. \nEksamensordning fastsatt av Kunnskapsdepartementet 29.06.2020."
+    },
+    {
+      "spraak": "default",
+      "verdi": "Fastsatt som forskrift av Kunnskapsdepartementet 15.11.2019. \nEksamensordning fastsatt av Kunnskapsdepartementet 29.06.2020."
+    }
+  ],
+  "fastsatt-spraak": {
+    "uriId": "http://psi.udir.no/kl06/nob"
+  },
+  "gyldig-fra": "2020-08-01T00:00:00",
+  "gyldig-til": null
+}

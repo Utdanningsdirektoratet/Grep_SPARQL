@@ -1,0 +1,100 @@
+﻿{
+  "@context": {
+    "@vocab": "http://psi.udir.no/ontologi/kl06/",
+    "uriId": "@id",
+    "uri": {
+      "@type": "@id"
+    },
+    "url-data": {
+      "@type": "@id"
+    },
+    "grepType": "@type",
+    "grep-type": {
+      "@type": "@id"
+    },
+    "verdi": "@value",
+    "spraak": "@language",
+    "status": {
+      "@type": "@id"
+    }
+  },
+  "grepType": "http://psi.udir.no/ontologi/kl06/opplaeringsfag",
+  "uriId": "http://psi.udir.no/kl06/NOR1Z37",
+  "id": "uuid:10385e46-ce71-415f-a361-94d05a24de35",
+  "kode": "NOR1Z37",
+  "uri": "http://psi.udir.no/kl06/NOR1Z37",
+  "url-data": "https://data.udir.no/kl06/v201906/opplaeringsfag/NOR1Z37",
+  "tittel": [
+    {
+      "spraak": "nob",
+      "verdi": "Norsk 1.-2. årstrinn"
+    },
+    {
+      "spraak": "nno",
+      "verdi": "Norsk 1.-2. årssteg"
+    },
+    {
+      "spraak": "default",
+      "verdi": "Norsk 1.-2. årstrinn"
+    }
+  ],
+  "grep-type": "http://psi.udir.no/ontologi/kl06/opplaeringsfag",
+  "status": "https://data.udir.no/kl06/v201906/status/status_utgaatt",
+  "sist-endret": "2016-06-16T12:20:24.3078718",
+  "merkelapper": [],
+  "programomraader-referanse": [],
+  "laereplan-referanse": [
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1-05"
+    }
+  ],
+  "fagkode-referanser": [
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR0201"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR0202"
+    }
+  ],
+  "fagomraade-referanser": [
+    {
+      "uriId": "http://psi.udir.no/kl06/FOMR404"
+    }
+  ],
+  "fortsetter-opplaering-i-samme-kompetansemaalsett-som": [],
+  "fagtype": {
+    "uriId": "http://psi.udir.no/kl06/fagtype_grunnskolefag"
+  },
+  "opplaeringsnivaa": {
+    "uriId": "http://psi.udir.no/kl06/opplaeringsnivaa_grunnskole"
+  },
+  "tilleggsopplysninger": [],
+  "bygger-paa-fag": [],
+  "for-aarstrinn": [
+    {
+      "uriId": "http://psi.udir.no/kl06/aarstrinn1"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/aarstrinn2"
+    }
+  ],
+  "kortform": [],
+  "erstatter": [
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1Z29"
+    }
+  ],
+  "erstattes-av": [
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1Z47"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/NOR1Z48"
+    }
+  ],
+  "tilhoerende-kompetansemaalsett": [
+    {
+      "uriId": "http://psi.udir.no/kl06/KMS943"
+    }
+  ]
+}
