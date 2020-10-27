@@ -10,5 +10,5 @@ Prosjektet går i korte trekk ut på å erstatte dagens løsning basert på [Vir
 ### Prøv selv
 I tilknytning til den gamle Virtuoso-løsningen vår, lagde vi en samling [sparql-apørringer](http://grepwiki.udir.no/index.php?title=SPARQL-spørringer) som kunne kjøres mot http://data.udir.no/kl06/sparql.
 I forbindelse med dette prosjektet, har vi prøvd å konvertere disse spørringene (i samlingen) til noe som fungerer mot det nye endepunktet. Se:
-* [Samling av SPARQL-spørringer](https://github.com/Utdanningsdirektoratet/Grep_SPARQL/blob/main/Samling%20av%20SPARQL-sp%C3%B8rringer.md) - Eksempler du kan teste mot:
+* [Samling av SPARQL-spørringer](https://github.com/Utdanningsdirektoratet/Grep_SPARQL/wiki/Samling-av-SPARQL-sp%C3%B8rringer) - Eksempler du kan teste mot:
 * https://sandkasse-data.udir.no:7200/sparql - Testversjon (anbefaler for tiden repoet kalt "NavnFiksing")
