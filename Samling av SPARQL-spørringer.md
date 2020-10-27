@@ -1,9 +1,6 @@
 # Samling av SPARQL-spørringer
 Eksempler på SPARQL-spørringer som kan testes mot repoet "NavnFiksing" på http://sandkasse-data.udir.no:7200/sparql
 
-# Table of Contents
-- [Utforskende SPARQL-spørringer](##Utforskende SPARQL-sørringer)
-
 ## Utforskende SPARQL-spørringer
 ### List opp typer (rdf-måten med prefix)
 ```
