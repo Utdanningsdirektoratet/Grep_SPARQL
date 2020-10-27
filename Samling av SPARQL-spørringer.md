@@ -496,9 +496,20 @@ FILTER (lang(?trinn) = 'default')
 ```
 ### Fra fagområde til læreplan
 ```
-# Denne spørringen henger ikke på greip (gir for mye rart som ikke henger sammen med overskriften. Se lenke til Grepwiki under blokken.
-# Se http://grepwiki.udir.no/index.php?title=SPARQL-spørringer#Fra_fagomr.C3.A5de_til_l.C3.A6replan
-# Fant likevel noe. Vi mangler kobling fra fagomraade til opplaeringsfag
+PREFIX u: <http://psi.udir.no/ontologi/kl06/>
+PREFIX d: <http://psi.udir.no/kl06/>
+ 
+SELECT DISTINCT ?lp ?tittel ?status
+WHERE {
+?of rdf:type u:opplaeringsfag;
+    u:fagomraade-referanser d:FOMR404 ;
+    u:laereplan-referanse ?lp .
+?lp u:tittel ?tittel ;
+    u:grep-type ?type ;
+    u:status ?status
+    FILTER (lang(?tittel) = "default")
+
+} ORDER BY ?type ?lp
 ```
    (lenke til Grepwiki)
 ### I hvilke fag (fagkoder) gis det undervisning første semester 2018?
