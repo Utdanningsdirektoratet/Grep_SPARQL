@@ -45,4 +45,4 @@ Husk at våre .jsonld-fileer er laget spesifikt for at de skal fungere som direk
 Et annet avvik (eller skulle vi si, en serie med avvik) fra .json-filene våre er hvordan objektene ({}) er bygd opp.
 ### eksempel
 Siden formålet med .jsonld er å forsyne GraphDB-repoet med tripler, trenger vi ikke å brodere ut mer enn bare referansen til de relaterte objektene. Se forskjellen på "fagtype" og "tilgjengelige-spraak" i filene vist nedenfor:
-[bilde]
+![.json vs .jsonld](https://github.com/Utdanningsdirektoratet/Grep_SPARQL/blob/main/Eksempelfiler_JSON-LD/img/json_og_jsonld.png)
