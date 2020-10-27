@@ -46,3 +46,6 @@ Et annet avvik (eller skulle vi si, en serie med avvik) fra .json-filene våre e
 ### eksempel
 Siden formålet med .jsonld er å forsyne GraphDB-repoet med tripler, trenger vi ikke å brodere ut mer enn bare referansen til de relaterte objektene. Se forskjellen på "fagtype" og "tilgjengelige-spraak" i filene vist nedenfor:
 ![.json vs .jsonld](https://github.com/Utdanningsdirektoratet/Grep_SPARQL/blob/main/Eksempelfiler_JSON-LD/img/json_og_jsonld.png)
+Her har vi forflatet objektet ved å løfte f.eks "tilgjengelige-spraak" sin "uri"-verdi til å være selve verdien til "tilgjengelige-spraak", og fjernet de øvrige egenskapene til objektet. Vi trenger bare referansene for å kunne få alt til å henge sammen i SPARQL.
+
+Hadde vi ikke gjort det, ville det ført til en masse blanke noder, som videre ville gjort spørringene svært vanskelig å skrive. Her ville vi f.eks fått mange blanke noder på alle forekomstene av f.eks "gyldighet" eller "kode" osv. I en grafdatabase går til til selve objektet, og ser egenskapene dered ved å "slå dem opp" - derfor trenger vi som sagt bare referansene.
