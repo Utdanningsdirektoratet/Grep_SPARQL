@@ -636,23 +636,21 @@ FILTER (lang(?nnotittel) = "nno")
 }ORDER BY ?fastsatt_sprak ?kode
 ```
 ### Liste over læreplaner som foreligger både på bokmål og nynorsk uten UNION (LK06 og LK20)
+```
 PREFIX u: <http://psi.udir.no/ontologi/kl06/>
-PREFIX d: <http://psi.udir.no/kl06/>
- 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
 SELECT DISTINCT ?kode ?nobtittel ?nnotittel ?fastsatt_sprak ?type WHERE {
     ?of rdf:type u:opplaeringsfag;
         u:laereplan-referanse ?lp .
-	?lp u:tittel ?nobtittel ;
-		u:tittel ?nnotittel ;
-		u:fastsatt-spraak ?fastsatt_sprak ;
-		u:url-data ?kode ;
+    ?lp u:tittel ?nobtittel ;
+        u:tittel ?nnotittel ;
+	u:fastsatt-spraak ?fastsatt_sprak ;
+	u:url-data ?kode ;
     	u:grep-type ?type .
 FILTER (lang(?nobtittel) = "nob")
 FILTER (lang(?nnotittel) = "nno")
 } ORDER BY ?fastsatt_sprak ?kode
 ```
-
 ### Antall kompetansemål pr. publiserte læreplan
 ```
 prefix u: <http://psi.udir.no/ontologi/kl06/>
