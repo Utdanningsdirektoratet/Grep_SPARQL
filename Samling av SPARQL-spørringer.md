@@ -511,7 +511,6 @@ WHERE {
 
 } ORDER BY ?type ?lp
 ```
-   (lenke til Grepwiki)
 ### I hvilke fag (fagkoder) gis det undervisning første semester 2018?
 ```
 PREFIX u: <http://psi.udir.no/ontologi/kl06/>
@@ -611,7 +610,7 @@ FILTER (lang(?tittel) = "default")
  
 # endring: henter ?lp fra ?opplaeringsfag i stedet for ?sett
 ```
-### Liste over læreplaner som foreligger både på bokmål og nynorsk (LK06 og LK20
+### Liste over læreplaner som foreligger både på bokmål og nynorsk med UNION (LK06 og LK20)
 ```
 prefix u: <http://psi.udir.no/ontologi/kl06/>
  
@@ -636,6 +635,24 @@ FILTER (lang(?nnotittel) = "nno")
 }
 }ORDER BY ?fastsatt_sprak ?kode
 ```
+### Liste over læreplaner som foreligger både på bokmål og nynorsk uten UNION (LK06 og LK20)
+PREFIX u: <http://psi.udir.no/ontologi/kl06/>
+PREFIX d: <http://psi.udir.no/kl06/>
+ 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?kode ?nobtittel ?nnotittel ?fastsatt_sprak ?type WHERE {
+    ?of rdf:type u:opplaeringsfag;
+        u:laereplan-referanse ?lp .
+	?lp u:tittel ?nobtittel ;
+		u:tittel ?nnotittel ;
+		u:fastsatt-spraak ?fastsatt_sprak ;
+		u:url-data ?kode ;
+    	u:grep-type ?type .
+FILTER (lang(?nobtittel) = "nob")
+FILTER (lang(?nnotittel) = "nno")
+} ORDER BY ?fastsatt_sprak ?kode
+```
+
 ### Antall kompetansemål pr. publiserte læreplan
 ```
 prefix u: <http://psi.udir.no/ontologi/kl06/>
