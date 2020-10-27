@@ -8,7 +8,7 @@ Legg spesielt merke til følgende:
 * Du står fritt til utforming, men Utdanningsdirektoratets logo skal ikke benyttes hvis det ikke foreligger særskilt avtale om det.
 * Dataene skal ikke presenteres på en måte som fremstår som villedende, og heller ikke fordreies eller fremstilles uriktig.
  
-## In English
+## In English:
 Carefully read all the conditions of use in the standardized license for [Norwegian Licence for Open Government Data (NLOD)](https://data.norge.no/nlod/en/).
 
 You are allowed to copy and make available, change and/or merge data sets described here with other data sets, and to use them for commercial purposes.
