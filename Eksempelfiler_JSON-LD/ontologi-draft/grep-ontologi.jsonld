@@ -1,0 +1,519 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs:comment": {
+      "@container": "@language"
+    },
+    "rdfs:label": {
+      "@container": "@language"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/base-element",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Element som holder på felles data for gjenbruk.",
+        "en": "Element which keeps the common data for reuse."
+      },
+      "rdfs:label": {
+        "nb": "base-element",
+        "en": "base-element"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/laereplan",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Element som uttrykker den samlede kompetansen en elev, lærling eller lærekandidat skal ha etter endt opplæring på et gitt nivå/trinn i ett eller flere fag (etter Kunnskapsløftet LK06).",
+        "en": "The overall competence a student, apprentice or training candidate should have after completing their training at a given level/step in one or more subjects (by model of the Knowledge Promotion Reform LK06)."
+      },
+      "rdfs:label": {
+        "nb": "laereplan",
+        "en": "curriculum"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/laereplan_lk20",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Element som uttrykker den samlede kompetansen en elev, lærling eller lærekandidat skal ha etter endt opplæring på et gitt nivå/trinn i ett eller flere fag (etter fagfornyelsen LK20).",
+        "en": "The overall competence a student, apprentice or training candidate should have after completing their training at a given level/step in one or more subjects (by model of the curriculum renewal LK20)."
+      },
+      "rdfs:label": {
+        "nb": "laereplan_lk20",
+        "en": "curriculum_lk20"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Et sett med kompetansemål, gruppert under hovedområder, som gjelder for et angitt sett med trinn eller nivå (etter Kunnskapsløftet LK06).",
+        "en": "A set of competence aims, grouped under the main areas, applies to a specified set of steps or levels (by model of the Knowledge Promotion Reform LK06)."
+      },
+      "rdfs:label": {
+        "nb": "kompetansemaalsett",
+        "en": "competence-aim-set"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett_lk20",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Et sett med kompetansemål, som gjelder for et angitt trinn eller nivå (etter fagfornyelsen LK20).",
+        "en": "A set of competence aims, applies to specified steps or levels (by model of the curriculum renewal LK20)."
+      },
+      "rdfs:label": {
+        "nb": "kompetansemaalsett_lk20",
+        "en": "competence-aim-set_lk20"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/kompetansemaal",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Kompetanse en elev skal ha oppnådd etter endt opplæring på et gitt nivå/trinn (etter Kunnskapsløftet LK06).",
+        "en": "Competende a student shall have attained after completing training at a given level/step (by model of the curriculum renewal LK06)."
+      },
+      "rdfs:label": {
+        "nb": "kompetansemaal",
+        "en": "competence-aim"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/kompetansemaal_lk20",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Kompetanse en elev skal ha oppnådd etter endt opplæring på et gitt nivå/trinn (etter fagfornyelsen LK20).",
+        "en": "Competende a student shall have attained after completing training at a given level/step (by model of the curriculum renewal LK20)."
+      },
+      "rdfs:label": {
+        "nb": "kompetansemaal_lk20",
+        "en": "competence-aim_lk20"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Element som sammen med de andre i samme læreplan, uttrykker hva som er det viktigste i faget og hva elevene/lærlingene/praksiskandidatene må lære for å mestre og bruke faget (kan være kunnskapsområder, metoder, begreper, tenkemåter og uttrykksformer)",
+        "en": "Element that, together with the others in the same curriculum, express what is the most important in the subject and what the students / apprentices / practice candidates must learn to master and use the subject (can be knowledge areas, methods, concepts, ways of thinking and forms of expression)"
+      },
+      "rdfs:label": {
+        "nb": "kjerneelement_lk20",
+        "en": "core-element_lk20"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/verb_lk20",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Bestanddel av kompetansemål som uttrykker anvendelse av kunnskaper og ferdigheter.",
+        "en": "Component of competence aims that express application of knowledge and skills."
+      },
+      "rdfs:label": {
+        "nb": "verb_lk20",
+        "en": "verb_lk20"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/tverrfaglig_tema_lk20",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Type element som beskriver hver av de tre prioriterte temaene folkehelse og lvsmestring, demokrati og medborgerskap og bærekraftig utvikling (forekommer i de enkelte læreplanene der de er ansett som aktuelle for for faget, og har der sin egen fagspesifikke beskrivelse).",
+        "en": "Type of element describing each of the three priority themes of public health and law enforcement, democracy and citizenship and sustainable development (occurs in the individual curricula where they are considered relevant to the subject, and have their own subject-specific description)."
+      },
+      "rdfs:label": {
+        "nb": "tverrfaglig_tema_lk20",
+        "en": "cross-curriculum-priority_lk20"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/grunnleggende_ferdighet_lk20",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Type element som beskriver hver av de fem ferdighetene lesing, skriving, regning, muntlige ferdigheter og digitale ferdigheter (forekommer i de enkelte læreplanene der de er ansett som mest aktuelle for faget, og har der sin egen fagspesifikke beskrivelse).",
+        "en": "Type elements that describe each of the five skills of reading, writing, numeracy, oral skills and digital skills (appear in the individual curricula where they are considered most relevant to the subject, and have their own subject-specific description)."
+      },
+      "rdfs:label": {
+        "nb": "grunnleggende_ferdighet_lk20",
+        "en": "basic-skill_lk20"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/merknad",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Fag- og vitnemålsmerknader som kan benyttes ved dokumentasjon av opplæringen, angitt i retningslinjer for føring av vitnemål og kompetansebevis fra Utdanningsdirektoratet",
+        "en": "Subject and diploma notes that can be used for documentation of the training, stated in guidelines for recognition of diplomas and certificates of competence of The Norwegian Directorate for Education and Training"
+      },
+      "rdfs:label": {
+        "nb": "merknad",
+        "en": "note"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/dokumenttype",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Egenskap for merknad for å angi om den gjelder for enten 'Vitnemål' eller 'Kompetansebevis'.",
+        "en": "Property for Notice to specify whether it applies to either 'diploma' or 'certificate of competence/vocational training certificate'."
+      },
+      "rdfs:label": {
+        "nb": "dokumenttype",
+        "en": "document-type"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/merknad"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/hovedomraade",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Delmengde av læreplan (LK06) for inndeling av det faglige innholdet i logiske blokker",
+        "en": "Aliquot of curriculum for division of the academic content into logical blocks"
+      },
+      "rdfs:label": {
+        "nb": "hovedomraade",
+        "en": "main area"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/programfag",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Delmengde av læreplan for inndeling av det faglige innholdet i logiske blokker (gjelder læreplaner (LK06) som har programfag i stedet for hovedområder)",
+        "en": "Aliquot of curriculum for division of the academic content into logical blocks (for curricula (LK06) having programme subject in stead of main subject area)"
+      },
+      "rdfs:label": {
+        "nb": "programfag",
+        "en": "main area"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/programomraade",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Fastsatt pakke av fag, med et gitt samlet årstimetall, og som tas under et utdanningsprogram",
+        "en": "Adopted package of subjects with a given total teaching hours for a year, and taken under an education program"
+      },
+      "rdfs:label": {
+        "nb": "programomraade",
+        "en": "programme-area"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/fagkategori",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Overordnet gruppering av opplæringsfag i faglige innholdskategorier for statistisk bruk",
+        "en": "Parent grouping of 'opplaeringsfag' (teaching subjects) in academic content categories for statistical purposes"
+      },
+      "rdfs:label": {
+        "nb": "fagkategori",
+        "en": "subject-category"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/utdanningsprogram",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Utdanningsløp i videregående utdanning som fører fram til studie- og eller yrkeskompetanse/fag- eller svennebrev jf. Rundskriv Udir-1-[et gitt årstall]",
+        "en": "Educational pathway in secondary school leading to the university and college admissions certification according to Circular Udir-1-[a given year]"
+      },
+      "rdfs:label": {
+        "nb": "utdanningsprogram",
+        "en": "education-programme"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/opplaeringsfag",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Strukturelt element for å angi hva en gruppe elever på et gitt årstrinn skal undervises i",
+        "en": "Structural element to define what a group of learners at a given grade should be taught"
+      },
+      "rdfs:label": {
+        "nb": "opplaeringsfag",
+        "en": "teaching-subject"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/fagomraade",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "nb": "Gruppering av opplæringsfag i faglige innholdskategorier under fagketegorier (se fagkategori) for statistisk bruk",
+        "en": "Grouping opplaeringsfag (teaching subjects) in academic content categories under topic categories (see fagkategorier) for statistical purposes"
+      },
+      "rdfs:label": {
+        "nb": "fagomraade",
+        "en": "subject-area"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/kjerneelementer",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "nb": "Liste over kjerneelementer",
+        "en": "List of core-elements / strands"
+      },
+      "rdfs:label": {
+        "nb": "kjerneelementer",
+        "en": "core-elements"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/laereplan_lk20"
+      },
+      "rdfs:range": [
+        {
+          "@id": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk20"
+        },
+        {
+          "@id": "http://psi.udir.no/ontologi/kl06/kjerneelement_lk_tester_med_array"
+        }
+      ]
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/id",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Egenskap for alle elementer for å angi en unik identifikator, enten som uuid, eller likt som en 'uri' eller 'url-psi' (vi anbefaler bruk av 'uri' som identifikator).",
+        "en": "Attribute for all elements to provide a unique identifier, either as UUID, or equally as a 'uri' or 'url-psi' (we recomand 'uri' as a identifier)."
+      },
+      "rdfs:label": {
+        "nb": "id",
+        "en": "id"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/kode",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Egenskap for mange typer elementer for å angi en unik identifikator",
+        "en": "Attribute for many types of elements to provide a unique identifier"
+      },
+      "rdfs:label": {
+        "nb": "id",
+        "en": "id"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/uri",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Egenskap for flere typer elementer for å angi en unik URL-basert identifikator",
+        "en": "Attribute for several types of elements to provide a unique URL based identifier"
+      },
+      "rdfs:label": {
+        "nb": "uri",
+        "en": "uri"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/url-data",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Egenskap for flere typer elementer for å angi en unik, URL-basert referanse til detaljert informasjon om elementet",
+        "en": "Attribute for several types of elements to set a unique URL based reference to detailed information about the element"
+      },
+      "rdfs:label": {
+        "nb": "url-data",
+        "en": "url-data"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/grep-type",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Egenskap for alle elementer for å angi hvilken type element det er i datamodellen til Grep, der verdien er en referanse til detaljert informasjon om typen",
+        "en": "Attribute for all elements to specify whta type the element is in Greps's data model (ontology), whose value is a lreference to detailed information about the type"
+      },
+      "rdfs:label": {
+        "nb": "grep-type",
+        "en": "grep-type"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/tittel",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Egenskap for flere typer elementer for å gi det en benevnelse eller et navn/etikett",
+        "en": "Attribute for several types of elements to give it a term or a name/label"
+      },
+      "rdfs:label": {
+        "nb": "tittel",
+        "en": "title"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/verdi",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Egenskap for egenskaper for å gi dem innhold",
+        "en": "Attribute for attributes to give them content"
+      },
+      "rdfs:label": {
+        "nb": "verdi",
+        "en": "value"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/sist-endret",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Dato for når objektet er sist endret og/eller lagt til, etter ISO 8601 (f.eks. 2019-06-28T08:03:10.3400969)",
+        "en": "Date a object is last modified and/or added, by ISO 8601 (e.g. 2019-06-28T08:03:10.3400969)"
+      },
+      "rdfs:label": {
+        "nb": "sist-endret",
+        "en": "last modified"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/merkelapper",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Liste over forekomster av typen merkelapp",
+        "en": "Array of individuals of the class 'merkelapp' (tag) "
+      },
+      "rdfs:label": {
+        "nb": "merkelapper",
+        "en": "tags"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    {
+      "@id": "http://psi.udir.no/ontologi/kl06/type-eksamensordning",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "nb": "Liste over objekter som er av typen merkelapp",
+        "en": "Array of objects that are of the type 'merkelapp' (tag)"
+      },
+      "rdfs:label": {
+        "nb": "merkelapper",
+        "en": "tags"
+      },
+      "rdfs:domain": {
+        "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+      },
+      "rdfs:range": {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs:comment": {
+            "@container": "@language"
+        },
+        "rdfs:label": {
+            "@container": "@language"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Data-element for å beskrive egenskaper ved primære datatyper i Grep, for eksempel første/siste semester, språk, årstrinn (alternativ etikett:stamdata)",
+                "en": "Data element to describe the properties of the primary data types in Grep, for example first/last semester, language, grade"
+            },
+            "rdfs:label": {
+                "nb": "hjelpedata",
+                "en": "master data"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/base-element"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/eksamensform",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "element for å angi hvilken eksamensform som skal påføres vitnemålet",
+                "en": "element to specify the examination form to be applied the certificate/testimony"
+            },
+            "rdfs:label": {
+                "nb": "eksamensform",
+                "en": "examination-form"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/aarstrinn",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Utdanningsnivå som angir progresjon for det 13-årige utdanningsløpet",
+                "en": "Educational level indicating progression for the the thirteen years of primary and secondary education"
+            },
+            "rdfs:label": {
+                "nb": "aarstrinn",
+                "en": "year-level"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/fagtype",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Gruppering av fag etter Rundskriv Udir-1-[et gitt årstall]",
+                "en": "Grouping subjects according to Circular Udir-1-[a certain year]"
+            },
+            "rdfs:label": {
+                "nb": "fagtype",
+                "en": "subject-type"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/opplaeringsnivaa",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Nivå i opplæringen, enten Grunnskole eller Videregående opplæring",
+                "en": "Level of education, whether primary or secondary education"
+            },
+            "rdfs:label": {
+                "nb": "opplaeringsnivaa",
+                "en": "teaching-level"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/semester",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Tidsperiode som viser til et konkret skolesemester i et gitt skoleår, f.eks. vår 2016",
+                "en": "Time that refer to a specific school term in a given school year, e.g. spring 2016"
+            },
+            "rdfs:label": {
+                "nb": "semester",
+                "en": "semester"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/merkelapp",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Data-felt for å angi spesifikke egenskaper for typene laereplan, fagkode og programomraade",
+                "en": "Data field to enter specific characteristics for the classes 'laereplan' (curriculum), 'fagkode' (subject code) and 'programomraade' (programme area)"
+            },
+            "rdfs:label": {
+                "nb": "merkelapp",
+                "en": "tag"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/dokumenttype",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for merknad for å angi om den gjelder for enten 'Vitnemål' eller 'Kompetansebevis'",
+                "en": "Property for Notice to specify whether it applies to either 'diploma' or 'certificate of competence/vocational training certificate'"
+            },
+            "rdfs:label": {
+                "nb": "dokumenttype",
+                "en": "document-type"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/sluttkompetanse",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for programområde for å angi om eleven/lærlingen eller praksiskandidaten oppnår studiekompetanse, yrkeskompetanse eller et fag- eller svennebrev etter endt utdanning",
+                "en": "Property for 'programomraade' (programme area) to specify if the student / apprentice or practice candidate obtains education, vocational qualifications or a trade or craft certificate after graduation"
+            },
+            "rdfs:label": {
+                "nb": "sluttkompetanse",
+                "en": "final-competence"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/opplaeringssted",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for programområde for å angi hvor opplæringen skjer, enten i 'Skole' eller 'Bedrift'",
+                "en": "Property for programomraade (programme area) to specify where the training takes place either in 'skole' (school) or 'bedrift' (company/enterprice)"
+            },
+            "rdfs:label": {
+                "nb": "opplaeringssted",
+                "en": "place-of-training"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/status",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Flagg som angir om elementet det opptrer i er 'Publisert' (del av gjeldende tilbud), eller 'Utgått' (ikke lenger tilbudt)",
+                "en": "Flag indicating whether another item is 'Publisert' ('Published' i.e. part of current offers), or 'Utgått' ('Expired' i.e. no longer offered)"
+            },
+            "rdfs:label": {
+                "nb": "status",
+                "en": "status"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/oppgave",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for fagkode for å angi om eksamen er sentralgitt, eller lokalt gitt",
+                "en": "Property for 'fagkode' (subject code) to specify whether the exam is centrally provided, or locally provided"
+            },
+            "rdfs:label": {
+                "nb": "oppgave",
+                "en": "examination-arrangement"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/sensur",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for fagkode for å angi om sensuren er administrert sentralt eller lokalt",
+                "en": "Property for 'fagkode' (subject code) to specify whether the censorship is managed centrally or locally"
+            },
+            "rdfs:label": {
+                "nb": "sensur",
+                "en": "censorship-arrangement"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/programomraade-type",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for programområde for å angi om opplæringen skjer i skole eller bedrift, eller om det tas som særløp",
+                "en": "Property for 'programomraade' (programme area) to specify whether the training takes place in school or company, or if it is taken as special pathway"
+            },
+            "rdfs:label": {
+                "nb": "programomraade-type",
+                "en": "type-programme-area"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/type-utdanningsprogram",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for utdanningsprogram for å angi om utdanningsprogrammet enten er Studieforberedende utdanningsprogram eller Yrkesfaglig utdanningsprogram",
+                "en": "Property of 'utdanningsprogram' (education programme) to determine whether the education program is either 'Studieforberedende utdanningsprogram' (Programme for General Studies) or 'Studieforberedende utdanningsprogram' (Vocational Education Programme)"
+            },
+            "rdfs:label": {
+                "nb": "type-utdanningsprogram",
+                "en": "education-programme-type"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/merknads-type",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Egenskap for merknad for å angi om den enten er en Fagmerknad eller Vitnemålsmerknad",
+                "en": "Property of 'merknad' (note) to specify whether it is either a 'Fagmerknad' (subject note) or 'Vitnemålsmerknad' (diploma note)"
+            },
+            "rdfs:label": {
+                "nb": "merknads-type",
+                "en": "note-type"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/vurderingsuttrykk",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Hjelpedataelement for å angi om det skal gis tallkarakterer eller om det skal benyttes andre uttrykk for vurderingen",
+                "en": "'hjelpedata' (ancillary data) element to specify whether it should be given numerical grades or whether to use other expressions of assessment"
+            },
+            "rdfs:label": {
+                "nb": "vurderingsuttrykk",
+                "en": "expression-of-assessment"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/trekkordning",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Hjelpedataelement for å angi om faget er trekkfag eller om det er obligatorisk eksamen",
+                "en": "'hjelpedata' (ancillary data) element to determine whether the subject is 'trekkfag' (subject which examination you were drawn out in) or whether it is 'obligatorsik' (mandatory) exam"
+            },
+            "rdfs:label": {
+                "nb": "trekkordning",
+                "en": "draw-arrangement"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/eksamensordning",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Hjelpedataelement for å angi hva slags eksamensordning som gjelder for elever og privatister",
+                "en": "'hjelpedata' (ancillary data) element to specify what type of 'ekamensordning' (examination arrangement) applicable to students and external candidates"
+            },
+            "rdfs:label": {
+                "nb": "eksamensordning",
+                "en": "examination-arrangement"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/eksamensform_paa_vitnemaal",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Hjelpedataelement for å angi hvilken eksamensform som skal påføres vitnemålet",
+                "en": "'hjelpedata' (ancillary data) element to specify the examination form to be applied the certificate/testimony"
+            },
+            "rdfs:label": {
+                "nb": "eksamensform_paa_vitnemaal",
+                "en": "examination-form-to-certificate"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/vurderingsordning",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Hjelpeelement knyttet til fagkode for å samle vurderingsrelatert informasjon for én målgruppe (for eksempel elev eller privatist)",
+                "en": "'hjelpedata' (ancillary data) element linked to the 'fagkode' (subject code) sorting of assessment related information for student and candidate"
+            },
+            "rdfs:label": {
+                "nb": "vurderingsordning",
+                "en": "examination-and-assesment"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/loeptype",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Hjelpedatatelement som benyttes for koblingen mellom et programområde og et annet programområde det bygger på (programomraade-bygger-paa) for å angi om overgangen er et kryssløp",
+                "en": "'hjelpedata' (ancillary data) element used for the link between a programme area and another programme area it builds on (programomraade-bygger-paa) to specify whether the transition is a cross-area specialization"
+            },
+            "rdfs:label": {
+                "nb": "loeptype",
+                "en": "examination-and-assesment"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        },
+        {
+            "@id": "http://psi.udir.no/ontologi/kl06/spraak",
+            "@type": "owl:Class",
+            "rdfs:comment": {
+                "nb": "Språk",
+                "en": "Language"
+            },
+            "rdfs:label": {
+                "nb": "spraak",
+                "en": "language"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://psi.udir.no/ontologi/kl06/hjelpedata"
+            }
+        }
+    ]
+}
