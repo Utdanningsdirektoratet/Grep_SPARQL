@@ -1,4 +1,4 @@
-> *[Grep](https://www.udir.no/om-udir/data/kl06-grep/) er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen. 
+> *Greps SPARQL-endepunkt er en RDF-representasjon av innholdet i [Grep](https://www.udir.no/om-udir/data/kl06-grep/), som er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen. 
 > Alle fastsatte læreplaner i Kunnskapsløftet (LK06 og LK20) ligger i Grep. 
 > I tillegg finnes kodeverk og informasjon om fag i grunnskole og videregående opplæring (vgo), 
 > inkludert vurderingsordninger, samt fag- og vitnemålsmerknader til bruk i dokumentasjon av opplæringen.*
