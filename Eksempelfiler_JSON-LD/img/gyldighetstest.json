@@ -1,0 +1,366 @@
+{
+  "@context": {
+    "@vocab": "http://psi.udir.no/ontologi/kl06/",
+    "uriId": "@id",
+    "uri": {
+      "@type": "@id"
+    },
+    "url-data": {
+      "@type": "@id"
+    },
+    "grepType": "@type",
+    "grep-type": {
+      "@type": "@id"
+    },
+    "verdi": "@value",
+    "spraak": "@language",
+    "status": {
+      "@type": "@id"
+    }
+  },
+  "grepType": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett",
+  "uriId": "http://psi.udir.no/kl06/KMS942",
+  "id": "uuid:a125a8af-7c5a-43a6-8710-37b8172086d2",
+  "kode": "KMS942",
+  "uri": "http://psi.udir.no/kl06/KMS942",
+  "url-data": "https://dev-grep4-rest.azurewebsites.net/v201906/kompetansemaalsett/KMS942",
+  "tittel": [
+    {
+      "spraak": "nno",
+      "verdi": "Kompetansemål etter Vg1/ Vg2"
+    },
+    {
+      "spraak": "eng",
+      "verdi": "Competence aims after year 1/2 in upper secondary school (Vg1/ Vg2)"
+    },
+    {
+      "spraak": "nob",
+      "verdi": "Kompetansemål etter Vg1/ Vg2"
+    },
+    {
+      "spraak": "default",
+      "verdi": "Kompetansemål etter Vg1/ Vg2"
+    }
+  ],
+  "grep-type": "http://psi.udir.no/ontologi/kl06/kompetansemaalsett",
+  "etter-fag": [
+    {
+      "gyldighet": {
+        "gyldig-fra": "2013-08-01T00:00:00",
+        "gyldig-til": "2021-07-31T00:00:00"
+      },
+      "uriId": "http://psi.udir.no/kl06/SAF1Z08"
+    }
+  ],
+  "programfag": null,
+  "hovedomraader-i-kontekst-av-kompetansemaalsett": [
+    {
+      "uriId": "http://psi.udir.no/kl06/HO1451"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/HO1455"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/HO1456"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/HO1457"
+    },
+    {
+      "uriId": "http://psi.udir.no/kl06/HO1458"
+    }
+  ],
+  "kompetansemaal": [
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15359"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15360"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15361"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15362"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15363"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15364"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15365"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15366"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15367"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15368"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15369"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15370"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15371"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15372"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K7904"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15373"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15374"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15375"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15376"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15377"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15378"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15379"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15380"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K7911"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15381"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15382"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15383"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15384"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15385"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K7921"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15386"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15387"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15388"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15389"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/K15390"
+    }
+  ],
+  "benyttes-paa-aarstrinn": [
+    {
+      "gyldighet": {
+        "gyldig-fra": "2013-08-01T00:00:00",
+        "gyldig-til": "2020-07-31T00:00:00"
+      },
+      "uriId": "http://psi.udir.no/kl06/vg1"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": "2013-08-01T00:00:00",
+        "gyldig-til": "2021-07-31T00:00:00"
+      },
+      "uriId": "http://psi.udir.no/kl06/vg2"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": "2013-08-01T00:00:00",
+        "gyldig-til": "2021-07-31T00:00:00"
+      },
+      "uriId": "http://psi.udir.no/kl06/vg3"
+    }
+  ],
+  "etter-aarstrinn": [
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/vg1"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/vg2"
+    },
+    {
+      "gyldighet": {
+        "gyldig-fra": null,
+        "gyldig-til": null
+      },
+      "uriId": "http://psi.udir.no/kl06/vg3"
+    }
+  ]
+}
