@@ -14,4 +14,4 @@ Den forrige løsningen var basert på oppdatering av data via en protokoll, kalt
 ### Prøv selv
 <a href="/Utdanningsdirektoratet/Grep_SPARQL/wiki/Hvordan-bruke-Greps-SPARQL-tjeneste">Les her om hvordan du kan bruke Greps SPARQL-tjeneste</a> (en side fra wikien)
 
-> Dette og mere til, finner du i "<a href="/Utdanningsdirektoratet/Grep_SPARQL/wiki">Wiki</a>" i toppmenyen
+> Dette og mere til, finner du under "<a href="/Utdanningsdirektoratet/Grep_SPARQL/wiki">Wiki</a>" i toppmenyen
