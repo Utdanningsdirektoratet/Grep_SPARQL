@@ -1,0 +1,1453 @@
+@prefix : <http://psi.udir.no/ontologi/kl06/> .
+@prefix d: <http://psi.udir.no/kl06/> .
+@prefix u: <http://psi.udir.no/ontologi/kl06/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix udir: <http://psi.udir.no/ontologi/> .
+@prefix url-data: <https://data.udir.no/kl06/v201906/> .
+@prefix st: <https://data.udir.no/kl06/v201906/status/status_> .
+@base <http://psi.udir.no/ontologi/kl06/> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://psi.udir.no/ontologi/kl06/tilhoerer-ferdighetsnivaa
+u:tilhoerer-ferdighetsnivaa rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain u:nivaabeskrivelse ;
+                         rdfs:range u:ferdighetsnivaa ;
+                         rdfs:comment "Egenskap for nivåbeskrivelse for å angi tilhørende ferdighetsnivå"@nb ,
+                                      "Property for Level description to specify the associated skill level"@en ;
+                         rdfs:label "tilhører ferdighetsnivå"@nb ,
+                                    "belongs to skill level"@en .
+
+###  http://psi.udir.no/ontologi/kl06/tilhoerer-ferdighetsomraade
+u:tilhoerer-ferdighetsomraade rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain u:nivaabeskrivelse ;
+                         rdfs:range u:ferdighetsomraade ;
+                         rdfs:comment "Egenskap for nivåbeskrivelse for å angi tilhørende ferdighetsområde"@nb ,
+                                      "Property for Level description to specify the associated skill area"@en ;
+                         rdfs:label "tilhører ferdighetsområde"@nb ,
+                                    "belongs to skill area"@en .
+
+###  http://psi.udir.no/ontologi/kl06/tilhoerer-grunnleggende-ferdighet
+u:tilhoerer-grunnleggende-ferdighet rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain u:nivaabeskrivelse , u:ferdighetsomraade ;
+                         rdfs:range u:grunnleggende_ferdighet_lk20 ;
+                         rdfs:comment "Egenskap for nivåbeskrivelse for å angi tilhørende grunnleggende ferdighet"@nb ,
+                                      "Property for Level description to specify the associated basic scill"@en ;
+                         rdfs:label "tilhører grunnleggende ferdighet"@nb ,
+                                    "belongs to basic skill"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://psi.udir.no/ontologi/kl06/beskrivelse-av-ferdighet-overskrift
+u:beskrivelse-av-ferdighet-overskrift rdf:type owl:DatatypeProperty ;
+            rdfs:domain u:u:grunnleggende_ferdighet_lk20 ;
+            rdfs:range rdf:langString ;
+            rdfs:comment "Property to set the title of the description of the basic skill according to the document \"Basic Skills Framework\""@en ,
+                         "Egenskap for å angi overskrift til beskrivelsen av den grunnleggende ferdigheten etter dokumentet \"Rammeverk for grunnleggende ferdigheter\""@nb ;
+            rdfs:label "description of basic skill, title"@en ,
+                       "beskrivelse av grunnleggende ferdighet, overskrift"@nb .
+
+###  http://psi.udir.no/ontologi/kl06/beskrivelse-av-ferdighet-beskrivelse
+u:beskrivelse-av-ferdighet-beskrivelse rdf:type owl:DatatypeProperty ;
+            rdfs:domain u:u:grunnleggende_ferdighet_lk20 ;
+            rdfs:range rdf:langString ;
+            rdfs:comment "Property to set the description of the basic skill according to the document \"Basic Skills Framework\""@en ,
+                         "Egenskap for å angi beskrivelsen av den grunnleggende ferdigheten etter dokumentet \"Rammeverk for grunnleggende ferdigheter\""@nb ;
+            rdfs:label "description of basic skill, description"@en ,
+                       "beskrivelse av grunnleggende ferdighet, beskrivelse"@nb .
+
+###  http://psi.udir.no/ontologi/kl06/hvordan-utvikles-ferdighet-overskrift
+u:hvordan-utvikles-ferdighet-overskrift rdf:type owl:DatatypeProperty ;
+            rdfs:domain u:u:grunnleggende_ferdighet_lk20 ;
+            rdfs:range rdf:langString ;
+            rdfs:comment "Property to set the title of the description of how the basic skill is developed according to the document \"Basic Skills Framework\""@en ,
+                         "Egenskap for å angi overskriften til beskrivelsen av hvordan den grunnleggende ferdigheten utvikles etter dokumentet \"Rammeverk for grunnleggende ferdigheter\""@nb ;
+            rdfs:label "description of basic skill, description"@en ,
+                       "beskrivelse av grunnleggende ferdighet, beskrivelse"@nb .
+
+###  http://psi.udir.no/ontologi/kl06/hvordan-utvikles-ferdighet-beskrivelse
+u:hvordan-utvikles-ferdighet-beskrivelse rdf:type owl:DatatypeProperty ;
+            rdfs:domain u:u:grunnleggende_ferdighet_lk20 ;
+            rdfs:range rdf:langString ;
+            rdfs:comment "Property to set the description of how the basic skill is developed according to the document \"Basic Skills Framework\""@en ,
+                         "Egenskap for å angi beskrivelsen av hvordan den grunnleggende ferdigheten utvikles etter dokumentet \"Rammeverk for grunnleggende ferdigheter\""@nb ;
+            rdfs:label "description of basic skill, description"@en ,
+                       "beskrivelse av grunnleggende ferdighet, beskrivelse"@nb .
+
+
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://psi.udir.no/ontologi/kl06/ferdighetsomraade
+u:ferdighetsomraade rdf:type owl:Class ;
+                    rdfs:comment "Overordnet temaklassifisering for en gitt grunnleggende ferdighet som videre deless inn i fem ulike ferdighetsnivåer for de grunnleggende ferdighetene etter dokumentet \"Rammeverk for grunnleggende ferdigheter\""@nb ,
+                                 "Overall topic classification for a given basic skill which is further divided into five different skill levels for the basic skills according to the document \"Basic Skills Framework\""@en ;
+                    rdfs:seeAlso <https://www.udir.no/laring-og-trivsel/rammeverk/rammeverk-for-grunnleggende-ferdigheter/> ;
+                    rdfs:label "Skill area"@en ,
+                               "Ferdighetsområde"@nb .
+
+
+###  http://psi.udir.no/ontologi/kl06/ferdighetsnivaa
+u:ferdighetsnivaa rdf:type owl:Class ;
+                        rdfs:comment "Element to indicate five levels to clarify the progression of basic skills from early primary education to secondary education according to the document \"Basic Skills Framework\""@en ,
+                                     "Element for å angi fem nivåer for å tydeliggjøre progresjonen i grunnleggende ferdigheter fra tidlig grunnopplæring til videregående opplæring etter dokumentet \"Rammeverk for grunnleggende ferdigheter\""@nb ;
+                        rdfs:seeAlso <https://www.udir.no/laring-og-trivsel/rammeverk/rammeverk-for-grunnleggende-ferdigheter/> ;
+                        rdfs:label "Skill level"@en ,
+                                   "Ferdighetsnivå"@nb .
+
+###  http://psi.udir.no/ontologi/kl06/nivaabeskrivelse
+u:nivaabeskrivelse rdf:type owl:Class ;
+                        rdfs:comment "Element to describe the progression in a given basic skill level at a given level (one of five levels) according to the document \"Basic Skills Framework\""@en ,
+                                     "Element for å beskrive progresjonen i en gitt grunnleggende ferdihgete på et gitt nivå (ett av fem nivåer) etter dokumentet \"Rammeverk for grunnleggende ferdigheter\""@nb ;
+                        rdfs:seeAlso <https://www.udir.no/laring-og-trivsel/rammeverk/rammeverk-for-grunnleggende-ferdigheter/> ;
+                        rdfs:label "Level description"@en ,
+                                   "Nivåbeskrivelse"@nb .
+
+###  http://psi.udir.no/ontologi/kl06/grunnleggende_ferdighet_lk20 (slik den foreligger i hovedgrafen)
+u:grunnleggende_ferdighet_lk20 rdf:type owl:Class ;
+                               rdfs:comment "A subset of the total competence in subjects that involves in showing the five of the selected skills: Literacy, being able to write, numeracy, oral and digital skills"@en ,
+                                            "Den delmengden av den totale kompetansen i fag som handler å vise de fem utvalgte ferdighetene: Å kunne lese, å kunne skrive, å kunne regne, muntlige og digitale ferdiheter"@nb ;
+                               rdfs:label "Basic skill"@en ,
+                                          "Grunnleggende ferdighet"@nb .
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+#################################################################
+#    Forekomster av Grunnleggende ferdighet
+#################################################################
+
+
+# d:GF1	"Muntlige ferdigheter"@default
+# d:GF2	"Å kunne skrive"@default
+# d:GF3	"Å kunne lese"@default
+# d:GF4	"Å kunne regne"@default	
+# d:GF5	"Digitale ferdigheter"@default
+
+d:GF1 rdf:type	u:grunnleggende_ferdighet_lk20 ;
+      owl:Class u:grunnleggende_ferdighet_lk20 ;
+      u:grep-type u:grunnleggende_ferdighet_lk20 ;
+      u:id "4c7259cf-0623-4cd3-8745-e02d7bb3ee4b" ;
+      u:kode "GF1" ;
+      u:sist-endret	"2020-06-22T07:41:14.7501365" ;
+      u:status st:publisert ;
+      u:tittel "Muntlige ferdigheter"@default , 
+               "Munnlege ferdigheiter"@nno ,
+               "Muntlige ferdigheter"@nob ,
+               "Njálmmálaš gálggat"@sme ,
+               "Njálmálasj tjehpudagá"@smj ,
+               "Njaalmeldh tjiehpiesvoeth"@sma ,
+               "Oral skills"@eng ;
+      u:uri	d:GF1 ;
+      u:rekkefoelge	"1"^^xsd:integer ;
+      u:url-data <https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF1> ;  
+      u:beskrivelse-av-ferdighet-overskrift "Hva er muntlige ferdigheter?"@nob ,
+                                            "Hva er muntlige ferdigheter?"@default ;
+      u:beskrivelse-av-ferdighet-beskrivelse "<p>Muntlige ferdigheter innebærer å skape mening gjennom å lytte, tale og samtale. Det betyr å mestre ulike språklige handlinger og å samordne verbale og andre delferdigheter. Det betyr videre å kunne lytte til andre og gi respons og være bevisst på mottakeren når en taler selv.</p><p>Muntlige ferdigheter er en forutsetning for utforskende samtaler der vi skaper og deler kunnskap med hverandre.</p><p>Muntlige ferdigheter er en forutsetning for livslang læring og for aktiv deltakelse i arbeids- og samfunnsliv på en reflektert og kritisk måte.</p>"@nob ,
+                                             "<p>Muntlige ferdigheter innebærer å skape mening gjennom å lytte, tale og samtale. Det betyr å mestre ulike språklige handlinger og å samordne verbale og andre delferdigheter. Det betyr videre å kunne lytte til andre og gi respons og være bevisst på mottakeren når en taler selv.</p><p>Muntlige ferdigheter er en forutsetning for utforskende samtaler der vi skaper og deler kunnskap med hverandre.</p><p>Muntlige ferdigheter er en forutsetning for livslang læring og for aktiv deltakelse i arbeids- og samfunnsliv på en reflektert og kritisk måte.</p>"@default ;
+      u:hvordan-utvikles-ferdighet-overskrift  "Hvordan utvikles muntlige ferdigheter?"@nob ,
+                                            "Hvordan utvikles muntlige ferdigheter?"@default ;
+      u:hvordan-utvikles-ferdighet-beskrivelse  "<p>Utviklingen av muntlige ferdigheter starter i tidlig småbarnsalder, og opplæringen i skolen må derfor bygge på og videreutvikle ferdighetene. Gjennom utviklingen av muntlige ferdigheter i opplæringen blir kunnskap tilegnet og formidlet i alle fag. Muntlige ferdigheter gir muligheter til å gå inn i ulike roller ved å veksle mellom faglig og dagligdags kommunikasjon.</p><p>Muntlige ferdigheter blir utviklet gjennom aktivt deltakelse for å kunne bli i stand til å mestre muntlige sjangre i stadig mer komplekse lytte- og talesituasjoner. Denne utviklingen er knyttet til innhold, språk og uttrykksmåter som kjennetegner de ulike fagene. På de laveste nivåene fører opplæringen fram til å kunne uttrykke egne meninger, framføre muntlige tekster, fortelle sammenhengende om opplevelser, ta ordet etter tur i en samtale, og lytte og gi respons til andre. Opplæringen på høyere nivå leder fram til å kunne ytre seg med grunngitte synspunkter, drøfte faglige spørsmål på ulike kunnskapsområder, forstå og ta hensyn til hvordan ulike uttrykksmåter påvirker budskapet, og vurdere egne ferdigheter.</p>"@nob ,
+                                            "<p>Utviklingen av muntlige ferdigheter starter i tidlig småbarnsalder, og opplæringen i skolen må derfor bygge på og videreutvikle ferdighetene. Gjennom utviklingen av muntlige ferdigheter i opplæringen blir kunnskap tilegnet og formidlet i alle fag. Muntlige ferdigheter gir muligheter til å gå inn i ulike roller ved å veksle mellom faglig og dagligdags kommunikasjon.</p><p>Muntlige ferdigheter blir utviklet gjennom aktivt deltakelse for å kunne bli i stand til å mestre muntlige sjangre i stadig mer komplekse lytte- og talesituasjoner. Denne utviklingen er knyttet til innhold, språk og uttrykksmåter som kjennetegner de ulike fagene. På de laveste nivåene fører opplæringen fram til å kunne uttrykke egne meninger, framføre muntlige tekster, fortelle sammenhengende om opplevelser, ta ordet etter tur i en samtale, og lytte og gi respons til andre. Opplæringen på høyere nivå leder fram til å kunne ytre seg med grunngitte synspunkter, drøfte faglige spørsmål på ulike kunnskapsområder, forstå og ta hensyn til hvordan ulike uttrykksmåter påvirker budskapet, og vurdere egne ferdigheter.</p>"@default .
+
+d:GF2 rdf:type	u:grunnleggende_ferdighet_lk20 ;
+      owl:Class u:grunnleggende_ferdighet_lk20 ;
+      u:grep-type u:grunnleggende_ferdighet_lk20 ;
+      u:id "3dd652b3-5531-4daa-917e-5119d42a20ca" ;
+      u:kode "GF2" ;
+      u:sist-endret	"2021-03-24T11:08:00.6895817" ;
+      u:status st:publisert ;
+      u:tittel "Å kunne skrive"@default ,
+               "Å kunne skrive"@nno ,
+               "Å kunne skrive"@nob ,
+               "Buktet tjállet"@smj ,
+               "Maehtedh tjaeledh"@sma ,
+               "Writing"@eng ,
+               "Máhttit čállit"@sme ;
+      u:uri	d:GF2 ;
+      u:url-data <https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF2> ;
+      u:rekkefoelge	"2"^^xsd:integer ;
+      u:beskrivelse-av-ferdighet-overskrift "Hva er å kunne skrive?"@nob ,
+                                            "Hva er å kunne skrive?"@default ;
+      u:beskrivelse-av-ferdighet-beskrivelse "<p>Å kunne skrive vil si å kunne ytre seg forståelig og på en hensiktsmessig måte om ulike emner og å kommunisere med andre. Skriving er også et redskap for å utvikle egne tanker og egen læring. For å kunne skrive forståelig og hensiktsmessig må ulike delferdigheter utvikles og samordnes. Dette innebærer å være i stand til å planlegge, utforme og bearbeide tekster som er tilpasset innholdet og formålet med skrivingen.</p><p>Utviklingen av skriveferdigheter gjør det mulig å gå inn i ulike skriveroller i kunnskapssamfunnet. Å utvikle skriveferdigheter er en forutsetning for livslang læring og for å kunne delta aktivt i samfunnslivet på en kritisk og reflektert måte.</p>"@nob ,
+                                             "<p>Å kunne skrive vil si å kunne ytre seg forståelig og på en hensiktsmessig måte om ulike emner og å kommunisere med andre. Skriving er også et redskap for å utvikle egne tanker og egen læring. For å kunne skrive forståelig og hensiktsmessig må ulike delferdigheter utvikles og samordnes. Dette innebærer å være i stand til å planlegge, utforme og bearbeide tekster som er tilpasset innholdet og formålet med skrivingen.</p><p>Utviklingen av skriveferdigheter gjør det mulig å gå inn i ulike skriveroller i kunnskapssamfunnet. Å utvikle skriveferdigheter er en forutsetning for livslang læring og for å kunne delta aktivt i samfunnslivet på en kritisk og reflektert måte.</p>"@default ;
+      u:hvordan-utvikles-ferdighet-overskrift  "Hvordan utvikles ferdigheten?"@nob ,
+                                            "Hvordan utvikles ferdigheten?"@default ;
+      u:hvordan-utvikles-ferdighet-beskrivelse  "<p>Den første skriveopplæringen innebærer å utvikle rettskriving, legge grunnlaget for en funksjonell håndskrift og tastaturbruk, samt å kunne planlegge og skrive enkle, oversiktlige tekster for ulike formål. Den videre utviklingen av funksjonell skriving henger tett sammen med den faglige utviklingen. Skriving er et redskap for læring i alle fag, og gjennom å utvikle skriveferdigheten blir faglige ferdigheter utviklet. Parallelt med den faglige progresjonen blir stadig mer avanserte og fagspesifikke skriveferdigheter utviklet, slik at form og innhold i teksten blir tilpasset formålet med skrivingen.</p>"@nob ,
+                                            "<p>Den første skriveopplæringen innebærer å utvikle rettskriving, legge grunnlaget for en funksjonell håndskrift og tastaturbruk, samt å kunne planlegge og skrive enkle, oversiktlige tekster for ulike formål. Den videre utviklingen av funksjonell skriving henger tett sammen med den faglige utviklingen. Skriving er et redskap for læring i alle fag, og gjennom å utvikle skriveferdigheten blir faglige ferdigheter utviklet. Parallelt med den faglige progresjonen blir stadig mer avanserte og fagspesifikke skriveferdigheter utviklet, slik at form og innhold i teksten blir tilpasset formålet med skrivingen.</p>"@default .
+
+d:GF3 rdf:type	u:grunnleggende_ferdighet_lk20 ;
+      owl:Class u:grunnleggende_ferdighet_lk20 ;
+      u:grep-type u:grunnleggende_ferdighet_lk20 ;
+      u:id "4fbb0383-5b71-449c-963b-6bfe36c99d9f" ;
+      u:kode "GF3" ;
+      u:sist-endret	"2021-03-24T11:08:19.4316434" ;
+      u:status st:publisert ;
+      u:tittel "Å kunne lese"@default ,
+                 "Å kunne lese"@nno ,
+                 "Å kunne lese"@nob ,
+                 "Buktet låhkåt"@smj ,
+                 "Maehtedh lohkedh"@sma ,
+                 "Reading"@eng ,
+                 "Máhttit lohkat"@sme ;
+      u:uri d:GF3 ;
+      u:url-data <https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF3> ;
+      u:rekkefoelge	"3"^^xsd:integer ;
+      u:beskrivelse-av-ferdighet-overskrift "Hva er å kunne lese?"@nob ,
+                                            "Hva er å kunne lese?"@default ;
+      u:beskrivelse-av-ferdighet-beskrivelse "<p>Å kunne lese er å skape mening fra tekst. Lesing gir innsikt i andres erfaringer, meninger, opplevelser og skaperkraft, uavhengig av tid og sted. Lesing av tekst på papir og digitalt er en forutsetning for livslang læring, og for å kunne delta aktivt i samfunnslivet på en kritisk og reflektert måte.</p><p>Å lese handler om å kunne forstå, bruke, reflektere over og engasjere seg i innholdet i tekster. Tekster inkluderer alt som kan leses i ulike medier, ikke bare ord, men også illustrasjoner, symboler eller andre uttrykksmåter. Kunnskap om hva som kjennetegner ulike typer tekster og deres funksjon, er en viktig del av lesing.</p>"@nob ,
+                                             "<p>Å kunne lese er å skape mening fra tekst. Lesing gir innsikt i andres erfaringer, meninger, opplevelser og skaperkraft, uavhengig av tid og sted. Lesing av tekst på papir og digitalt er en forutsetning for livslang læring, og for å kunne delta aktivt i samfunnslivet på en kritisk og reflektert måte.</p><p>Å lese handler om å kunne forstå, bruke, reflektere over og engasjere seg i innholdet i tekster. Tekster inkluderer alt som kan leses i ulike medier, ikke bare ord, men også illustrasjoner, symboler eller andre uttrykksmåter. Kunnskap om hva som kjennetegner ulike typer tekster og deres funksjon, er en viktig del av lesing.</p>"@default ;
+      u:hvordan-utvikles-ferdighet-overskrift  "Hvordan utvikles ferdigheten?"@nob ,
+                                            "Hvordan utvikles ferdigheten?"@default ;
+      u:hvordan-utvikles-ferdighet-beskrivelse  "<p>Utvikling av funksjonell leseferdighet er et samspill mellom forståelsesprosesser og avkodingsprosesser i tilnærmingen til tekst. Den grunnleggende leseopplæringen innebærer å mestre lesing av papirtekster og skjermbaserte tekster med konsentrasjon, utholdenhet, flyt og sammenheng. I opplæringen blir den funksjonelle leseferdigheten utviklet videre gjennom kunnskap om og erfaring med ulike tekster i de enkelte fagene. Dette innebærer å kunne orientere seg i et tekstmangfold og forholde seg kritisk til ulike typer informasjon i stadig mer komplekse lesesituasjoner.</p><p>Leseutvikling krever gode strategier for å kunne søke og bearbeide informasjon. Bevisst bruk av hensiktsmessige lesestrategier som er tilpasset formålet med lesingen og med ulike teksttyper i fagene, er derfor avgjørende for å utvikle funksjonell leseferdighet.</p>"@nob ,
+                                            "<p>Utvikling av funksjonell leseferdighet er et samspill mellom forståelsesprosesser og avkodingsprosesser i tilnærmingen til tekst. Den grunnleggende leseopplæringen innebærer å mestre lesing av papirtekster og skjermbaserte tekster med konsentrasjon, utholdenhet, flyt og sammenheng. I opplæringen blir den funksjonelle leseferdigheten utviklet videre gjennom kunnskap om og erfaring med ulike tekster i de enkelte fagene. Dette innebærer å kunne orientere seg i et tekstmangfold og forholde seg kritisk til ulike typer informasjon i stadig mer komplekse lesesituasjoner.</p><p>Leseutvikling krever gode strategier for å kunne søke og bearbeide informasjon. Bevisst bruk av hensiktsmessige lesestrategier som er tilpasset formålet med lesingen og med ulike teksttyper i fagene, er derfor avgjørende for å utvikle funksjonell leseferdighet.</p>"@default .
+
+d:GF4 rdf:type	u:grunnleggende_ferdighet_lk20 ;
+      owl:Class u:grunnleggende_ferdighet_lk20 ;
+      u:grep-type u:grunnleggende_ferdighet_lk20 ;
+      u:id "dbd3352b-f99e-4725-bc17-02d4d52bd6b4" ;
+      u:kode "GF4" ;
+      u:sist-endret	"2021-03-24T11:08:42.8815864" ;
+      u:status st:publisert ;
+      u:tittel "Å kunne regne"@default ,
+               "Å kunne rekne"@nno ,
+               "Å kunne regne"@nob ,
+               "Máhttit rehkenastit"@sme ,
+               "Buktet riekknit"@smj ,
+               "Maehtedh ryöknedh"@sma ,
+               "Numeracy"@eng ;
+      u:uri d:GF4 ;
+      u:url-data <https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF4> ;
+      u:rekkefoelge "4"^^xsd:integer ;
+      u:beskrivelse-av-ferdighet-overskrift "Hva er å kunne regne?"@nob ,
+                                            "Hva er å kunne regne?"@default ;
+      u:beskrivelse-av-ferdighet-beskrivelse "<p>Å kunne regne er å bruke matematikk på en rekke livsområder. Å kunne regne innebærer å resonnere og bruke matematiske begreper, fremgangsmåter, fakta og verktøy for å løse problemer og for å beskrive, forklare og forutse hva som skjer. Det innebærer å gjenkjenne regning i ulike kontekster, stille spørsmål av matematisk karakter, velge holdbare metoder når problemene skal løses, være i stand til å gjennomføre dem og tolke gyldigheten og rekkevidden av resultatene. Videre innebærer det å kunne gå tilbake i prosessen for å gjøre nye valg. Å kunne regne innebærer å kommunisere og argumentere for valg som er foretatt ved å tolke konteksten og arbeide med problemstillingen fram til en ferdig løsning.</p><p>Å kunne regne er nødvendig for å kunne ta stilling til samfunnsspørsmål på en reflektert og kritisk måte ved å forstå sammenhenger og vurdere fakta. Videre er det en viktig forutsetning for egen utvikling og for å ta hensiktsmessige avgjørelser på en rekke områder i eget arbeids- og dagligliv.</p>"@nob ,
+                                             "<p>Å kunne regne er å bruke matematikk på en rekke livsområder. Å kunne regne innebærer å resonnere og bruke matematiske begreper, fremgangsmåter, fakta og verktøy for å løse problemer og for å beskrive, forklare og forutse hva som skjer. Det innebærer å gjenkjenne regning i ulike kontekster, stille spørsmål av matematisk karakter, velge holdbare metoder når problemene skal løses, være i stand til å gjennomføre dem og tolke gyldigheten og rekkevidden av resultatene. Videre innebærer det å kunne gå tilbake i prosessen for å gjøre nye valg. Å kunne regne innebærer å kommunisere og argumentere for valg som er foretatt ved å tolke konteksten og arbeide med problemstillingen fram til en ferdig løsning.</p><p>Å kunne regne er nødvendig for å kunne ta stilling til samfunnsspørsmål på en reflektert og kritisk måte ved å forstå sammenhenger og vurdere fakta. Videre er det en viktig forutsetning for egen utvikling og for å ta hensiktsmessige avgjørelser på en rekke områder i eget arbeids- og dagligliv.</p>"@default ;
+      u:hvordan-utvikles-ferdighet-overskrift "Hvordan utvikles ferdigheten?"@nob , "Hvordan utvikles ferdigheten?"@default ;
+      u:hvordan-utvikles-ferdighet-beskrivelse  "<p>Utviklingen i ferdigheten går fra å bruke den i konkrete situasjoner til mer sammensatte og abstrakte situasjoner som er knyttet til ulike fagområder. Videre utvikles ferdigheten fra å kunne gjenkjenne konkrete situasjoner som kan løses ved regning, til å kunne analysere et vidt spekter av problemstillinger. Utviklingen går fra å kunne ta i bruk nye begreper og lære nye teknikker og strategier til å kunne velge hensiktsmessige metoder på en målrettet og effektiv måte.</p>"@nob ,
+                                            "<p>Utviklingen i ferdigheten går fra å bruke den i konkrete situasjoner til mer sammensatte og abstrakte situasjoner som er knyttet til ulike fagområder. Videre utvikles ferdigheten fra å kunne gjenkjenne konkrete situasjoner som kan løses ved regning, til å kunne analysere et vidt spekter av problemstillinger. Utviklingen går fra å kunne ta i bruk nye begreper og lære nye teknikker og strategier til å kunne velge hensiktsmessige metoder på en målrettet og effektiv måte.</p>"@default .
+ 
+d:GF5 rdf:type	u:grunnleggende_ferdighet_lk20 ;
+      owl:Class u:grunnleggende_ferdighet_lk20 ;
+      u:grep-type u:grunnleggende_ferdighet_lk20 ;
+      u:id "c4dec77c-afed-49c8-ab49-ee36f40d218c" ;
+      u:kode "GF5" ;
+      u:sist-endret	"2020-06-22T07:41:14.7501365" ;
+      u:status st:publisert ;
+      u:tittel "Digitale ferdigheter"@default ,
+               "Digitale ferdigheiter"@nno ,
+               "Digitale ferdigheter"@nob ,
+               "Digitála gálggat"@sme ,
+               "Digitála tjehpudagá"@smj ,
+               "Digitaale tjiehpiesvoeth"@sma ,
+               "Digital skills"@eng ;
+      u:uri d:GF5 ;
+      u:url-data <https://data.udir.no/kl06/v201906/grunnleggende-ferdigheter-lk20/GF5> ;
+      u:rekkefoelge "5"^^xsd:integer ;
+      u:beskrivelse-av-ferdighet-overskrift "Hva er digitale ferdigheter?"@nob ,
+                                            "Hva er digitale ferdigheter?"@default ;
+      u:beskrivelse-av-ferdighet-beskrivelse "<p>Digitale ferdigheter vil si å innhente og behandle informasjon, være kreativ og skapende med digitale ressurser, og å kommunisere og samhandle med andre i digitale omgivelser. Det innebærer å kunne bruke digitale ressurser hensiktsmessig og forsvarlig for å løse praktiske oppgaver. Digitale ferdigheter innebærer også å utvikle digital dømmekraft ved å tilegne seg kunnskap og gode strategier for nettbruk.</p><p>Digitale ferdigheter er en viktig forutsetning for videre læring og for aktiv deltakelse i et arbeidsliv og et samfunn i stadig endring. Den digitale utviklingen har endret mange av premissene for lesing, skriving, regning og muntlige uttrykksformer. Derfor er digitale ferdigheter en naturlig del av grunnlaget for læringsarbeid både i og på tvers av faglige emner. Dette gir muligheter for nye og endrede læringsprosesser og arbeidsmetoder, men stiller også økte krav til dømmekraft.</p>"@nob ,
+                                             "<p>Digitale ferdigheter vil si å innhente og behandle informasjon, være kreativ og skapende med digitale ressurser, og å kommunisere og samhandle med andre i digitale omgivelser. Det innebærer å kunne bruke digitale ressurser hensiktsmessig og forsvarlig for å løse praktiske oppgaver. Digitale ferdigheter innebærer også å utvikle digital dømmekraft ved å tilegne seg kunnskap og gode strategier for nettbruk.</p><p>Digitale ferdigheter er en viktig forutsetning for videre læring og for aktiv deltakelse i et arbeidsliv og et samfunn i stadig endring. Den digitale utviklingen har endret mange av premissene for lesing, skriving, regning og muntlige uttrykksformer. Derfor er digitale ferdigheter en naturlig del av grunnlaget for læringsarbeid både i og på tvers av faglige emner. Dette gir muligheter for nye og endrede læringsprosesser og arbeidsmetoder, men stiller også økte krav til dømmekraft.</p>"@default ;
+      u:hvordan-utvikles-ferdighet-overskrift  "Hvordan utvikles digitale ferdigheter?"@nob ,
+                                            "Hvordan utvikles digitale ferdigheter?"@default ;
+      u:hvordan-utvikles-ferdighet-beskrivelse  "<p>Digitale ferdigheter utvikles gjennom å bruke digitale ressurser. Det innebærer å benytte digitale ressurser til å tilegne seg faglig kunnskap og til å uttrykke egen kompetanse. I dette ligger det også en økende grad av selvstendighet og dømmekraft i valg og bruk av digitale ressurser.</p>"@nob ,
+                                            "<p>Digitale ferdigheter utvikles gjennom å bruke digitale ressurser. Det innebærer å benytte digitale ressurser til å tilegne seg faglig kunnskap og til å uttrykke egen kompetanse. I dette ligger det også en økende grad av selvstendighet og dømmekraft i valg og bruk av digitale ressurser.</p>"@default .
+
+
+
+#################################################################
+#    Forekomster av Ferdighetsnivå
+#################################################################
+
+
+d:ferdighetsnivaa1 a u:ferdighetsnivaa ;
+                   owl:Class u:ferdighetsnivaa ;
+                   u:tittel "Nivå 1"@nob , "Nivå 1"@default ;
+                   u:rekkefoelge "1"^^xsd:integer .
+
+d:ferdighetsnivaa2 a u:ferdighetsnivaa ;
+                   owl:Class u:ferdighetsnivaa ;
+                   u:tittel "Nivå 2"@nob , "Nivå 2"@default ;
+                   u:rekkefoelge "2"^^xsd:integer .
+
+d:ferdighetsnivaa3 a u:ferdighetsnivaa ;
+                   owl:Class u:ferdighetsnivaa ;
+                   u:tittel "Nivå 3"@nob , "Nivå 3"@default ;
+                   u:rekkefoelge "3"^^xsd:integer .
+
+d:ferdighetsnivaa4 a u:ferdighetsnivaa ;
+                   owl:Class u:ferdighetsnivaa ;
+                   u:tittel "Nivå 4"@nob , "Nivå 4"@default ;
+                   u:rekkefoelge "4"^^xsd:integer .
+
+d:ferdighetsnivaa5 a u:ferdighetsnivaa ;
+                   owl:Class u:ferdighetsnivaa ;
+                   u:tittel "Nivå 5"@nob , "Nivå 5"@default ;
+                   u:rekkefoelge "5"^^xsd:integer .
+
+
+
+
+
+#################################################################
+#    Forekomster av Ferdighetsområde
+#################################################################
+
+# d:GF1	Muntlige ferdigheter
+# d:GF2	Å kunne skrive
+# d:GF3	Å kunne lese
+# d:GF4	Å kunne regne
+# d:GF5	Digitale ferdigheter
+
+
+
+# Ferdighetsområder i d:GF1	Muntlige ferdigheter
+d:ferdighetsomraade01 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:tittel "Forstå og vurdere"@nob , "Forstå og vurdere"@default ;
+                   u:beskrivelse "Forstå og vurdere omfatter de reseptive aspektene ved muntlige ferdigheter og innebærer å lytte, tolke og vurdere muntlig tekst og vise respekt for den som taler."@nob , 
+                                 "Forstå og vurdere omfatter de reseptive aspektene ved muntlige ferdigheter og innebærer å lytte, tolke og vurdere muntlig tekst og vise respekt for den som taler."@default .
+d:ferdighetsomraade02 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:tittel "Utforme"@nob , "Utforme"@default ;
+                   u:beskrivelse "Utforme omfatter bruk av ulike uttrykksmåter som støtte i både spontan og forberedt tale."@nob , 
+                                 "Utforme omfatter bruk av ulike uttrykksmåter som støtte i både spontan og forberedt tale."@default .
+d:ferdighetsomraade03 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:tittel "Kommunisere"@nob , "Kommunisere"@default ;
+                   u:beskrivelse "Kommunisere omfatter det å utrykke meninger, drøfte problemstillinger og strukturere og tilpasse egen muntlig tekst til mottakere, innhold og formål."@nob , 
+                                 "Kommunisere omfatter det å utrykke meninger, drøfte problemstillinger og strukturere og tilpasse egen muntlig tekst til mottakere, innhold og formål."@default .
+d:ferdighetsomraade04 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:tittel "Reflektere og vurdere"@nob , "Reflektere og vurdere"@default ;
+                   u:beskrivelse "Reflektere og vurdere omfatter å lytte til, gi respons, videreutvikle innspill fra andre og fremme egne meninger i spontane og forberedte samtaler."@nob , 
+                                 "Reflektere og vurdere omfatter å lytte til, gi respons, videreutvikle innspill fra andre og fremme egne meninger i spontane og forberedte samtaler."@default .
+
+# Ferdighetsområder i d:GF2	Å kunne skrive
+d:ferdighetsomraade05 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:tittel "Planlegge og bearbeide"@nob , "Planlegge og bearbeide"@default ;
+                   u:beskrivelse "Planlegge og bearbeide innebærer å kunne ta i bruk ulike strategier og kilder som forberedelse til skriving, og å være i stand til å revidere tekster på bakgrunn av egen vurdering og andres tilbakemeldinger."@nob , 
+                                 "Planlegge og bearbeide innebærer å kunne ta i bruk ulike strategier og kilder som forberedelse til skriving, og å være i stand til å revidere tekster på bakgrunn av egen vurdering og andres tilbakemeldinger."@default .
+d:ferdighetsomraade06 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;                   
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:tittel "Å utforme"@nob , "Å utforme"@default ;
+                   u:beskrivelse "Å utforme innebærer å kunne beherske og ta i bruk rettskriving, grammatikk, setningsoppbygging og tekstbinding på papir og skjerm sammen med andre uttrykksmidler som bilder, figurer og symboler på en hensiktsmessig måte."@nob , 
+                                 "Å utforme innebærer å kunne beherske og ta i bruk rettskriving, grammatikk, setningsoppbygging og tekstbinding på papir og skjerm sammen med andre uttrykksmidler som bilder, figurer og symboler på en hensiktsmessig måte."@default .
+d:ferdighetsomraade07 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;                   
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:tittel "Kommunisere"@nob , "Kommunisere"@default ;
+                   u:beskrivelse "Kommunisere innebærer å kunne uttrykke meninger, drøfte problemstillinger, dele kunnskap og erfaringer gjennom å tilpasse egne tekster til mottaker, innhold og formål."@nob , 
+                                 "Kommunisere innebærer å kunne uttrykke meninger, drøfte problemstillinger, dele kunnskap og erfaringer gjennom å tilpasse egne tekster til mottaker, innhold og formål."@default .
+d:ferdighetsomraade08 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;                   
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:tittel "Reflektere og vurdere"@nob , "Reflektere og vurdere"@default ;
+                   u:beskrivelse "Reflektere og vurdere innebærer å bruke skriving som redskap for å kunne følge med på og å utvikle bevissthet om egen læring."@nob , 
+                                 "Reflektere og vurdere innebærer å bruke skriving som redskap for å kunne følge med på og å utvikle bevissthet om egen læring."@default .
+
+# Ferdighetsområder i d:GF3	Å kunne lese
+d:ferdighetsomraade09 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;                   
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:tittel "Forberede, utføre og bearbeide"@nob , "Forberede, utføre og bearbeide"@default ;
+                   u:beskrivelse "Forberede, utføre og bearbeide innebærer å ta i bruk ulike strategier for å forstå tekster av stadig større vanskegrad. Dette forutsetter avkodingsstrategier der lyder trekkes sammen til ord, ord til setninger og setninger til tekst."@nob , 
+                                 "Forberede, utføre og bearbeide innebærer å ta i bruk ulike strategier for å forstå tekster av stadig større vanskegrad. Dette forutsetter avkodingsstrategier der lyder trekkes sammen til ord, ord til setninger og setninger til tekst."@default .
+d:ferdighetsomraade10 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;                   
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:tittel "Finne"@nob , "Finne"@default ;
+                   u:beskrivelse "Finne innebærer å finne fram til informasjon som er eksplisitt eller implisitt uttrykt i tekster."@nob , 
+                                 "Finne innebærer å finne fram til informasjon som er eksplisitt eller implisitt uttrykt i tekster."@default .
+d:ferdighetsomraade11 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:tittel "Tolke og sammenholde"@nob , "Tolke og sammenholde"@default ;
+                   u:beskrivelse "Tolke og sammenholde innebærer å kunne trekke slutninger på bakgrunn av innholdet i én eller flere tekster."@nob , 
+                                 "Tolke og sammenholde innebærer å kunne trekke slutninger på bakgrunn av innholdet i én eller flere tekster."@default .
+d:ferdighetsomraade12 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;                   
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:tittel "Reflektere og vurdere"@nob , "Reflektere og vurdere "@default ;
+                   u:beskrivelse "Reflektere og vurdere innebærer å forholde seg selvstendig til tekster. Dette spenner fra å kommentere innholdet i tekster med utgangspunkt i egne meninger til å forholde seg kritisk til en tekst som en helhet og begrunne egne synspunkter, analyser eller vurderinger."@nob , 
+                                 "Reflektere og vurdere innebærer å forholde seg selvstendig til tekster. Dette spenner fra å kommentere innholdet i tekster med utgangspunkt i egne meninger til å forholde seg kritisk til en tekst som en helhet og begrunne egne synspunkter, analyser eller vurderinger."@default .
+
+# Ferdighetsområder i d:GF4	Å kunne regne
+d:ferdighetsomraade13 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:tittel "Gjenkjenne og beskrive"@nob , "Gjenkjenne og beskrive"@default ;
+                   u:beskrivelse "Gjenkjenne og beskrive innebærer å kunne identifisere situasjoner som involverer tall, størrelser og geometriske figurer som finnes i lek, spill, faglige situasjoner og i arbeids og samfunnsliv. Det innebærer å finne relevante problemstillinger og å analysere og formulere dem på en hensiktsmessig måte."@nob , 
+                                 "Gjenkjenne og beskrive innebærer å kunne identifisere situasjoner som involverer tall, størrelser og geometriske figurer som finnes i lek, spill, faglige situasjoner og i arbeids og samfunnsliv. Det innebærer å finne relevante problemstillinger og å analysere og formulere dem på en hensiktsmessig måte."@default .
+d:ferdighetsomraade14 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;                   
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:tittel "Bruke og bearbeide"@nob , "Bruke og bearbeide"@default ;
+                   u:beskrivelse "Bruke og bearbeide innebærer å kunne velge strategier for problemløsing. Det innebærer å kunne bruke passende måleenheter og presisjonsnivå, utføre beregninger, hente informasjon fra tabeller og diagrammer, tegne og beskrive geometriske figurer, bearbeide og sammenlikne informasjon fra ulike kilder."@nob , 
+                                 "Bruke og bearbeide innebærer å kunne velge strategier for problemløsing. Det innebærer å kunne bruke passende måleenheter og presisjonsnivå, utføre beregninger, hente informasjon fra tabeller og diagrammer, tegne og beskrive geometriske figurer, bearbeide og sammenlikne informasjon fra ulike kilder."@default .
+d:ferdighetsomraade15 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;                   
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:tittel "Kommunisere"@nob , "Kommunisere"@default ;
+                   u:beskrivelse "Kommunisere innebærer å kunne uttrykke regneprosesser og resultater på ulike måter. Kommunisere innebærer også å kunne begrunne valg, formidle arbeidsprosesser og presentere resultater til en mottaker."@nob , 
+                                 "Kommunisere innebærer å kunne uttrykke regneprosesser og resultater på ulike måter. Kommunisere innebærer også å kunne begrunne valg, formidle arbeidsprosesser og presentere resultater til en mottaker."@default .
+d:ferdighetsomraade16 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:tittel "Reflektere og vurdere"@nob , "Reflektere og vurdere"@default ;
+                   u:beskrivelse "Reflektere og vurdere innebærer å kunne tolke resultater, vurdere gyldighet og reflektere over hva resultatene betyr for problemstillingen. Det innebærer å bruke resultatet som grunnlag for en konklusjon eller en handling."@nob , 
+                                 "Reflektere og vurdere innebærer å kunne tolke resultater, vurdere gyldighet og reflektere over hva resultatene betyr for problemstillingen. Det innebærer å bruke resultatet som grunnlag for en konklusjon eller en handling."@default .
+
+# Ferdighetsområder i d:GF5	Digitale ferdigheter
+d:ferdighetsomraade17 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;                   
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:tittel "Bruke og forstå"@nob , "Bruke og forstå"@default ;
+                   u:beskrivelse "Bruke og forstå innebærer å kunne bruke og navigere på digitale ressurser i og utenfor nettverk og ivareta informasjons- og datasikkerhet. Digitale ressurser kan bl. a. være digitalt utstyr, programvare og digitale måleinstrumenter. Videre innebærer det å følge digitale formkrav for å understreke og formidle budskap ved bruk av effekter, bilder, lyd, illustrasjoner, tabeller, overskrifter og punkter."@nob , 
+                                 "Bruke og forstå innebærer å kunne bruke og navigere på digitale ressurser i og utenfor nettverk og ivareta informasjons- og datasikkerhet. Digitale ressurser kan bl. a. være digitalt utstyr, programvare og digitale måleinstrumenter. Videre innebærer det å følge digitale formkrav for å understreke og formidle budskap ved bruk av effekter, bilder, lyd, illustrasjoner, tabeller, overskrifter og punkter."@default .
+d:ferdighetsomraade18 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;                   
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:tittel "Finne og behandle"@nob , "Finne og behandle"@default ;
+                   u:beskrivelse "Finne og behandle innebærer å tilegne seg, behandle, tolke og vurdere informasjon fra digitale kilder, utøve kildekritikk og bruke kildehenvisning. Informasjon fra digitale kilder kan være informasjon fra tekst, lyd, bilde, video, symboler, interaktive elementer eller rådata fra registreringer og observasjoner."@nob , 
+                                 "Finne og behandle innebærer å tilegne seg, behandle, tolke og vurdere informasjon fra digitale kilder, utøve kildekritikk og bruke kildehenvisning. Informasjon fra digitale kilder kan være informasjon fra tekst, lyd, bilde, video, symboler, interaktive elementer eller rådata fra registreringer og observasjoner."@default .
+d:ferdighetsomraade19 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;                    ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:tittel "Produsere og bearbeide"@nob , "Produsere og bearbeide"@default ;
+                   u:beskrivelse "Produsere og bearbeide innebærer å være kreativ og skapende med bruk av digitale ressurser. Dette innebærer å lage digitale produkter ved hjelp av digitale ressurser, enten ved nyskaping eller videreutvikling og gjenbruk."@nob , 
+                                 "Produsere og bearbeide innebærer å være kreativ og skapende med bruk av digitale ressurser. Dette innebærer å lage digitale produkter ved hjelp av digitale ressurser, enten ved nyskaping eller videreutvikling og gjenbruk."@default .
+d:ferdighetsomraade20 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;                   
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:tittel "Kommunisere og samhandle"@nob , "Kommunisere og samhandle"@default ;
+                   u:beskrivelse "Kommunisere og samhandle innebærer å kunne bruke digitale ressurser for kommunikasjon og samhandling. Digital samhandling innebærer bruk av digitale ressurser til planlegging, organisering og gjennomføring av læringsarbeid sammen med andre, for eksempel gjennom samskriving og deling."@nob , 
+                                 "Kommunisere og samhandle innebærer å kunne bruke digitale ressurser for kommunikasjon og samhandling. Digital samhandling innebærer bruk av digitale ressurser til planlegging, organisering og gjennomføring av læringsarbeid sammen med andre, for eksempel gjennom samskriving og deling."@default .
+d:ferdighetsomraade21 a u:ferdighetsomraade ;
+                   owl:Class u:ferdighetsomraade ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF ;                   
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:tittel "Utøve digital dømmekraft"@nob , "Utøve digital dømmekraft"@default ;
+                   u:beskrivelse "Utøve digital dømmekraft innebærer å følge regler for personvern og vise hensyn til andre på nett. Det handler om å bruke strategier for å unngå uønskede hendelser og å vise evne til etisk refleksjon og vurdering av egen rolle på nett og i sosiale medier."@nob , 
+                                 "Utøve digital dømmekraft innebærer å følge regler for personvern og vise hensyn til andre på nett. Det handler om å bruke strategier for å unngå uønskede hendelser og å vise evne til etisk refleksjon og vurdering av egen rolle på nett og i sosiale medier."@default .
+
+
+
+
+
+
+
+
+#################################################################
+#    Forekomster av Nivåbeskrivelser
+#################################################################
+
+# Nivåbeskrivelse for GF1	Muntlige ferdigheter, ferdighetsområde 1, Forstå og vurdere
+d:nivaabeskrivelse001 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade01 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Lytter etter informasjon og argumentasjon"@nob , 
+                                 "Lytter etter informasjon og argumentasjon"@default .
+d:nivaabeskrivelse002 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade01 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Lytter etter relevant informasjon. Skiller mellom meninger og fakta."@nob , 
+                                 "Lytter etter relevant informasjon.Skiller mellom meninger og fakta."@default .
+d:nivaabeskrivelse003 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade01 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Tolker muntlige tekster med konkurrerende informasjon. Skiller mellom informerende og argumenterende tekst."@nob , 
+                                 "Tolker muntlige tekster med konkurrerende informasjon. Skiller mellom informerende og argumenterende tekst."@default .
+d:nivaabeskrivelse004 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade01 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Tolker komplekse tekster og reflekterer over formål og innhold."@nob , 
+                                 "Tolker komplekse tekster og reflekterer over formål og innhold."@default .
+d:nivaabeskrivelse005 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade01 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Vurderer komplekse tekster kritisk og tar stilling til innhold og formål."@nob , 
+                                 "Vurderer komplekse tekster kritisk og tar stilling til innhold og formål."@default .
+
+# Nivåbeskrivelse for GF1	Muntlige ferdigheter, ferdighetsområde 2, Utforme
+d:nivaabeskrivelse006 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade02 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Kombinerer verbalspråk med andre ressurser og virkemidler."@nob , 
+                                 "Kombinerer verbalspråk med andre ressurser og virkemidler."@default .
+d:nivaabeskrivelse007 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade02 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Varierer verbalspråk, og bruker digitale og andre ressurser og virkemidler."@nob , 
+                                 "Varierer verbalspråk, og bruker digitale og andre ressurser og virkemidler."@default .
+d:nivaabeskrivelse008 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade02 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Bruker verbalspråk, og velger andre ressurser og virkemidler bevisst."@nob , 
+                                 "Bruker verbalspråk, og velger andre ressurser og virkemidler bevisst."@default .
+d:nivaabeskrivelse009 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade02 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Tilpasser verbalspråk, andre ressurser og virkemidler til formål, situasjon og tilhørere."@nob , 
+                                 "Tilpasser verbalspråk, andre ressurser og virkemidler til formål, situasjon og tilhørere."@default .
+d:nivaabeskrivelse010 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade02 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Bruker verbalspråk, andre ressurser og virkemidler selvstendig og kritisk."@nob , 
+                                 "Bruker verbalspråk, andre ressurser og virkemidler selvstendig og kritisk."@default .
+
+
+# Nivåbeskrivelse for GF1	Muntlige ferdigheter, ferdighetsområde 3, Kommunisere
+d:nivaabeskrivelse011 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade03 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Tar ordet etter tur i samtaler og gir tilbakemeldinger. Gjengir innhold med egne ord og stiller oppklarende spørsmål."@nob , 
+                                 "Tar ordet etter tur i samtaler og gir tilbakemeldinger. Gjengir innhold med egne ord og stiller oppklarende spørsmål."@default .
+d:nivaabeskrivelse012 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade03 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Følger opp innspill fra andre i faglige samtaler. Stiller oppklarende og utdypende spørsmål."@nob , 
+                                 "Følger opp innspill fra andre i faglige samtaler. Stiller oppklarende og utdypende spørsmål."@default .
+d:nivaabeskrivelse013 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade03 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Videreutvikler innspill fra andre og fremmer egne meninger aktivt. Støtter seg på andre og utnytter egne erfaringer i faglig arbeid."@nob , 
+                                 "Videreutvikler innspill fra andre og fremmer egne meninger aktivt. Støtter seg på andre og utnytter egne erfaringer i faglig arbeid."@default .
+d:nivaabeskrivelse014 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade03 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Driver samtalen framover gjennom relevante innspill. Utveksler erfaringer og kunnskap og skaper mening i faglige fellesskap."@nob , 
+                                 "Driver samtalen framover gjennom relevante innspill. Utveksler erfaringer og kunnskap og skaper mening i faglige fellesskap."@default .
+d:nivaabeskrivelse015 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade03 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Gir respons og samtaler fleksibelt og effektivt i ulike faglige roller og situasjoner. Vurderer egen forståelse og velger relevante strategier."@nob , 
+                                 "Gir respons og samtaler fleksibelt og effektivt i ulike faglige roller og situasjoner. Vurderer egen forståelse og velger relevante strategier."@default .
+
+# Nivåbeskrivelse for GF1	Muntlige ferdigheter, ferdighetsområde 4, Reflektere og vurdere
+d:nivaabeskrivelse016 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade04 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Forteller om opplevelser og faglige emner. Uttrykker og begrunner egne meninger."@nob , 
+                                 "Forteller om opplevelser og faglige emner. Uttrykker og begrunner egne meninger."@default .
+d:nivaabeskrivelse017 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade04 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Beskriver faglige emner og erfaringer. Argumenterer for egne meninger."@nob , 
+                                 "Beskriver faglige emner og erfaringer. Argumenterer for egne meninger."@default .
+d:nivaabeskrivelse018 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade04 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Greier ut om faglige emner og prosesser. Argumenterer for egne synspunkter og tar ulike perspektiver. Bruker fagterminologi."@nob , 
+                                 "Greier ut om faglige emner og prosesser. Argumenterer for egne synspunkter og tar ulike perspektiver. Bruker fagterminologi."@default .
+d:nivaabeskrivelse019 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade04 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Reflekterer over faglige emner og prosesser. Bruker nyansert fagterminologi i lengre utgreiinger. Bygger opp saklig argumentasjon."@nob , 
+                                 "Reflekterer over faglige emner og prosesser. Bruker nyansert fagterminologi i lengre utgreiinger. Bygger opp saklig argumentasjon."@default .
+d:nivaabeskrivelse020 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade04 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF1 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Drøfter komplekse faglige emner og prosesser med presis fagterminologi. Bygger opp en helhetlig argumentasjon."@nob , 
+                                 "Drøfter komplekse faglige emner og prosesser med presis fagterminologi. Bygger opp en helhetlig argumentasjon."@default .
+
+
+######################################################################################################
+# d:GF1	Muntlige ferdigheter
+# d:GF2	Å kunne skrive
+# d:GF3	Å kunne lese
+# d:GF4	Å kunne regne
+# d:GF5	Digitale ferdigheter
+
+
+
+# Nivåbeskrivelse for d:GF2	Å kunne skrive, ferdighetsområde 5, Planlegge og bearbeide
+d:nivaabeskrivelse021 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade05 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Lager notater og bruker enkle kilder som grunnlag for skriving. Gjør enkle endringer i tekster etter tilbakemeldinger."@nob , 
+                                 "Lager notater og bruker enkle kilder som grunnlag for skriving. Gjør enkle endringer i tekster etter tilbakemeldinger."@default .
+d:nivaabeskrivelse022 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade05 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Bruker notater og kilder som grunnlag for skriving og oppgir kildene. Omarbeider tekster etter tilbakemeldinger"@nob , 
+                                 "Bruker notater og kilder som grunnlag for skriving og oppgir kildene. Omarbeider tekster etter tilbakemeldinger"@default .
+d:nivaabeskrivelse023 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade05 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Bruker ulike notater og varierte kilder som grunnlag for skriving. Vurderer og reviderer tekster og beskriver kvaliteter ved dem."@nob , 
+                                 "Bruker ulike notater og varierte kilder som grunnlag for skriving. Vurderer og reviderer tekster og beskriver kvaliteter ved dem."@default .
+d:nivaabeskrivelse024 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade05 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Velger varierte strategier som grunnlag for skriving, og integrerer, refererer og siterer relevante kilder. Reviderer tekster og vurderer kvaliteter ved dem."@nob , 
+                                 "Velger varierte strategier som grunnlag for skriving, og integrerer, refererer og siterer relevante kilder. Reviderer tekster og vurderer kvaliteter ved dem."@default .
+d:nivaabeskrivelse025 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade05 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Velger relevante skrivestrategier og bruker kilder på en kritisk og etterprøvbar måte. Foretar kritisk revisjon av egne tekster."@nob , 
+                                 "Velger relevante skrivestrategier og bruker kilder på en kritisk og etterprøvbar måte. Foretar kritisk revisjon av egne tekster."@default .
+
+# Nivåbeskrivelse for d:GF2	Å kunne skrive, ferdighetsområde 6, Utforme
+d:nivaabeskrivelse026 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade06 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Behersker lydrett skriving for hånd og på tastatur. Kombinerer ulike uttrykksmidler som tegninger, bilder, symboler og verbalspråk."@nob , 
+                                 "Behersker lydrett skriving for hånd og på tastatur. Kombinerer ulike uttrykksmidler som tegninger, bilder, symboler og verbalspråk."@default .
+d:nivaabeskrivelse027 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade06 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Bygger opp leselige og oversiktlige tekster med rettskriving av ord for hånd og på tastatur og kombinerer ulike uttrykksmidler."@nob , 
+                                 "Bygger opp leselige og oversiktlige tekster med rettskriving av ord for hånd og på tastatur og kombinerer ulike uttrykksmidler."@default .
+d:nivaabeskrivelse028 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ; 
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade06;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Bygger opp tekster etter skrivemåter og uttrykksmidler i faget både for hånd og på tastatur."@nob , 
+                                 "Bygger opp tekster etter skrivemåter og uttrykksmidler i faget både for hånd og på tastatur."@default .
+d:nivaabeskrivelse029 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade06 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Bygger opp komplekse fagtekster med terminologi og uttrykksmidler tilpasset fag og formål."@nob , 
+                                 "Bygger opp komplekse fagtekster med terminologi og uttrykksmidler tilpasset fag og formål."@default .
+d:nivaabeskrivelse030 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade06 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Bruker og utnytter spesialisert fagterminologi og ulike uttrykksmidler tilpasset fag og formål."@nob , 
+                                 "Bruker og utnytter spesialisert fagterminologi og ulike uttrykksmidler tilpasset fag og formål."@default .
+
+# Nivåbeskrivelse for d:GF2	Å kunne skrive, ferdighetsområde 7, Kommunisere
+d:nivaabeskrivelse031 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade07 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Uttrykker egne meninger og forteller, beskriver og systematiserer i enkle tekster."@nob , 
+                                 "Uttrykker egne meninger og forteller, beskriver og systematiserer i enkle tekster."@default .
+d:nivaabeskrivelse032 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade07 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Uttrykker egne meninger, tar ulike perspektiver og formulerer spørsmål. Forteller, beskriver og systematiserer i ulike typer fagtekster."@nob , 
+                                 "Uttrykker egne meninger, tar ulike perspektiver og formulerer spørsmål. Forteller, beskriver og systematiserer i ulike typer fagtekster."@default .
+d:nivaabeskrivelse033 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade07 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Argumenterer ved å begrunne synspunkter. Bruker fortelling i faglig kommunikasjon, dokumenterer kunnskap og arbeidsprosesser og utformer hypoteser."@nob , 
+                                 "Argumenterer ved å begrunne synspunkter. Bruker fortelling i faglig kommunikasjon, dokumenterer kunnskap og arbeidsprosesser og utformer hypoteser."@default .
+d:nivaabeskrivelse034 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade07 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Tar stilling til og argumenterer for og imot ulike synspunkter. Utforsker faglige emner. Bruker varierte fortellingsstrukturer i faglig kommunikasjon."@nob , 
+                                 "Tar stilling til og argumenterer for og imot ulike synspunkter. Utforsker faglige emner. Bruker varierte fortellingsstrukturer i faglig kommunikasjon."@default .
+d:nivaabeskrivelse035 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade07 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Bygger opp en helhetlig argumentasjon, utforsker kritisk og problematiserer faglige emner."@nob , 
+                                 "Bygger opp en helhetlig argumentasjon, utforsker kritisk og problematiserer faglige emner."@default .
+
+# Nivåbeskrivelse for d:GF2	Å kunne skrive, ferdighetsområde 8, Reflektere og vurdere
+d:nivaabeskrivelse036 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade08 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Uttrykker personlige erfaringer i enkle tekster."@nob , 
+                                 "Uttrykker personlige erfaringer i enkle tekster."@default .
+d:nivaabeskrivelse037 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade08 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Reflekterer over personlige og faglige erfaringer i ulike typer tekster."@nob , 
+                                 "Reflekterer over personlige og faglige erfaringer i ulike typer tekster."@default .
+d:nivaabeskrivelse038 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade08 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Reflekterer over egen læring i arbeidet med faglige tekster."@nob , 
+                                 "Reflekterer over egen læring i arbeidet med faglige tekster."@default .
+d:nivaabeskrivelse039 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade08 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Reflekterer og vurderer egen læring i arbeidet med faglige tekster."@nob , 
+                                 "Reflekterer og vurderer egen læring i arbeidet med faglige tekster."@default .
+d:nivaabeskrivelse040 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade08 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF2 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Reflekterer kritisk over og vurderer egen læring i arbeidet med faglige tekster."@nob , 
+                                 "Reflekterer kritisk over og vurderer egen læring i arbeidet med faglige tekster."@default .
+
+
+
+
+######################################################################################################
+# d:GF1	Muntlige ferdigheter
+# d:GF2	Å kunne skrive
+# d:GF3	Å kunne lese
+# d:GF4	Å kunne regne
+# d:GF5	Digitale ferdigheter
+
+# Frrdighetsbeskrivelser for GF3 Å kunne lese
+
+# Nivåbeskrivelse for d:GF3	Å kunne lese, ferdighetsområde 9, Forberede, utføre og bearbeide
+d:nivaabeskrivelse041 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade09 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Bruker forkunnskaper. Skaffer seg overblikk over teksten før lesing. Leser enkle tekster på papir og skjerm. Bearbeider teksten med noe hjelp."@nob , 
+                                 "Bruker forkunnskaper. Skaffer seg overblikk over teksten før lesing. Leser enkle tekster på papir og skjerm. Bearbeider teksten med noe hjelp."@default .
+d:nivaabeskrivelse042 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade09 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Leser enkle tekster med flyt og utholdenhet. Finner og leser tekster på Internett. Stiller spørsmål til teksten. Kan samtale om innholdet."@nob , 
+                                 "Leser enkle tekster med flyt og utholdenhet. Finner og leser tekster på Internett. Stiller spørsmål til teksten. Kan samtale om innholdet."@default .
+d:nivaabeskrivelse043 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade09 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Varierer lesemåte etter teksten og formålet med lesingen i fag. Leser og navigerer hensiktsmessig på Internett. Bruker oppklarende strategier. Bruker ulike metoder for å systematisere innholdet"@nob , 
+                                 "Varierer lesemåte etter teksten og formålet med lesingen i fag. Leser og navigerer hensiktsmessig på Internett. Bruker oppklarende strategier. Bruker ulike metoder for å systematisere innholdet"@default .
+d:nivaabeskrivelse044 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade09 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Bruker faglige og andre forkunnskaper aktivt. Er bevisst og kritisk ved lesing på papir og Internett. Bearbeider teksten på selvstendig måte."@nob , 
+                                 "Bruker faglige og andre forkunnskaper aktivt. Er bevisst og kritisk ved lesing på papir og Internett. Bearbeider teksten på selvstendig måte."@default .
+d:nivaabeskrivelse045 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade09 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Velger relevante strategier tilpasset teksten og formålet med lesingen. Er bevisst på egen lesing og reflekterer over anvendte strategier."@nob , 
+                                 "Velger relevante strategier tilpasset teksten og formålet med lesingen. Er bevisst på egen lesing og reflekterer over anvendte strategier."@default .
+
+
+# Nivåbeskrivelse for d:GF3	Å kunne lese, ferdighetsområde 10, Finne
+d:nivaabeskrivelse046 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade10 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Finner eksplisitt uttrykt informasjon som er sentralt plassert i enkle tekster."@nob , 
+                                 "Finner eksplisitt uttrykt informasjon som er sentralt plassert i enkle tekster."@default .
+d:nivaabeskrivelse047 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade10 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Kjenner igjen sentrale tekster i faget. Finner eksplisitt uttrykt informasjon i tekster med konkurrerende informasjon. Refererer til kilder."@nob , 
+                                 "Kjenner igjen sentrale tekster i faget. Finner eksplisitt uttrykt informasjon i tekster med konkurrerende informasjon. Refererer til kilder."@default .
+d:nivaabeskrivelse048 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade10 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Finner og kombinerer informasjon fra flere steder i tekster med konkurrerende informasjon. Vurderer om kildene er troverdige."@nob , 
+                                 "Finner og kombinerer informasjon fra flere steder i tekster med konkurrerende informasjon. Vurderer om kildene er troverdige."@default .
+d:nivaabeskrivelse049 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade10 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Finner implisitt informasjon i komplekse tekster. Bruker kilder på en kritisk og etterprøvbar måte."@nob , 
+                                 "Finner implisitt informasjon i komplekse tekster. Bruker kilder på en kritisk og etterprøvbar måte."@default .
+d:nivaabeskrivelse050 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade10 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Finner detaljert og implisitt informasjon i tekster med ukjent form eller innhold."@nob , 
+                                 "Finner detaljert og implisitt informasjon i tekster med ukjent form eller innhold."@default .
+
+
+# Nivåbeskrivelse for d:GF3	Å kunne lese, ferdighetsområde 11, Tolke og sammenholde
+d:nivaabeskrivelse051 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade11 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Bruker egne ord og trekker enkle slutninger ut fra informasjon i tekster."@nob , 
+                                 "Bruker egne ord og trekker enkle slutninger ut fra informasjon i tekster."@default .
+d:nivaabeskrivelse052 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade11 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Identifiserer hovedtemaet og forstår sammenhenger som er tydelig uttrykt i en tekst."@nob , 
+                                 "Identifiserer hovedtemaet og forstår sammenhenger som er tydelig uttrykt i en tekst."@default .
+d:nivaabeskrivelse053 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade11 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Forstår informasjon som er implisitt uttrykt i tekster."@nob , 
+                                 "Forstår informasjon som er implisitt uttrykt i tekster."@default .
+d:nivaabeskrivelse054 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade11 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Forstår tvetydigheter. Oppfatter motstridende informasjon og informasjon som står i motsetning til det forventede."@nob , 
+                                 "Forstår tvetydigheter. Oppfatter motstridende informasjon og informasjon som står i motsetning til det forventede."@default .
+d:nivaabeskrivelse055 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade11 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Viser helhetlig og detaljert forståelse av komplekse tekster. Kan systematisere og trekke slutninger på bakgrunn av implisitt informasjon."@nob , 
+                                 "Viser helhetlig og detaljert forståelse av komplekse tekster. Kan systematisere og trekke slutninger på bakgrunn av implisitt informasjon."@default .
+
+
+
+# Nivåbeskrivelse for d:GF3	Å kunne lese, ferdighetsområde 12, Reflektere og vurdere
+d:nivaabeskrivelse056 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade12 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Kommenterer innhold i enkle tekster."@nob , 
+                                 "Kommenterer innhold i enkle tekster."@default .
+d:nivaabeskrivelse057 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade12 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Vurderer innholdet i tekster ut fra fagkunnskap og egne erfaringer."@nob , 
+                                 "Vurderer innholdet i tekster ut fra fagkunnskap og egne erfaringer."@default .
+d:nivaabeskrivelse058 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade12 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Gir begrunnede vurderinger av form og faglig innhold i tekster."@nob , 
+                                 "Gir begrunnede vurderinger av form og faglig innhold i tekster."@default .
+d:nivaabeskrivelse059 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade12 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Analyserer og vurderer form og innhold på en kritisk måte. Sammenligner og systematiserer informasjon i ulike faglige tekster."@nob , 
+                                 "Analyserer og vurderer form og innhold på en kritisk måte. Sammenligner og systematiserer informasjon i ulike faglige tekster."@default .
+d:nivaabeskrivelse060 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade12 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF3;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Vurderer komplekse tekster om ukjente emner på en kritisk måte. Trekker inn faglige og samfunnsmessige perspektiver."@nob , 
+                                 "Vurderer komplekse tekster om ukjente emner på en kritisk måte. Trekker inn faglige og samfunnsmessige perspektiver."@default .
+
+
+
+
+
+
+
+######################################################################################################
+# d:GF1	Muntlige ferdigheter
+# d:GF2	Å kunne skrive
+# d:GF3	Å kunne lese
+# d:GF4	Å kunne regne
+# d:GF5	Digitale ferdigheter
+
+# Nivåbeskrivelser for GF4 Å kunne regne
+
+# Nivåbeskrivelse for d:GF4	Å kunne regne, ferdighetsområde 13, Gjenkjenne og beskrive
+d:nivaabeskrivelse061 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade13 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Gjenkjenner konkrete situasjoner som kan løses ved regning, og formulerer spørsmål til dem."@nob , 
+                                 "Gjenkjenner konkrete situasjoner som kan løses ved regning, og formulerer spørsmål til dem."@default .
+d:nivaabeskrivelse062 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade13 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Gjenkjenner mønstre og formulerer problemer som kan løses i ett trinn. Analyserer innholdet i tekster og situasjoner der regning inngår."@nob , 
+                                 "Gjenkjenner mønstre og formulerer problemer som kan løses i ett trinn. Analyserer innholdet i tekster og situasjoner der regning inngår."@default .
+d:nivaabeskrivelse063 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade13 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Analyserer tekster og situasjoner som forutsetter matematisk problemløsing i flere trinn. Forenkler situasjonen eller problemet slik at det blir håndterbart."@nob , 
+                                 "Analyserer tekster og situasjoner som forutsetter matematisk problemløsing i flere trinn. Forenkler situasjonen eller problemet slik at det blir håndterbart."@default .
+d:nivaabeskrivelse064 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade13 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Analyserer mer sammensatte matematiske problemstillinger i dagligdagse og faglige sammenhenger. Identifiserer størrelser som varierer."@nob , 
+                                 "Analyserer mer sammensatte matematiske problemstillinger i dagligdagse og faglige sammenhenger. Identifiserer størrelser som varierer."@default .
+d:nivaabeskrivelse065 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade13 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Analyserer et vidt spekter av matematiske problemstillinger som kan beskrives med en modell. Omformer og formulerer modellen for videre arbeid."@nob , 
+                                 "Analyserer et vidt spekter av matematiske problemstillinger som kan beskrives med en modell. Omformer og formulerer modellen for videre arbeid."@default .
+
+
+# Nivåbeskrivelser for GF4 Å kunne regne, ferdighetsområde 14, Bruke og bearbeide
+d:nivaabeskrivelse066 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade14 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Bruker enkle strategier for opptelling og klassifisering av mengder og geometriske former. Utfører enkle beregninger på ulike måter."@nob , 
+                                 "Bruker enkle strategier for opptelling og klassifisering av mengder og geometriske former. Utfører enkle beregninger på ulike måter."@default .
+d:nivaabeskrivelse067 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade14 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Velger hensiktsmessig regneart og bruker ulike metoder for å finne svaret. Bruker blant annet geometriske former, måleenheter, tabeller og grafiske framstillinger i prosessen."@nob , 
+                                 "Velger hensiktsmessig regneart og bruker ulike metoder for å finne svaret. Bruker blant annet geometriske former, måleenheter, tabeller og grafiske framstillinger i prosessen."@default .
+d:nivaabeskrivelse068 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade14 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Sammenlikner størrelser og uttrykker sammenhengen mellom dem. Velger hensiktsmessige måleenheter og gjennomfører egne undersøkelser."@nob , 
+                                 "Sammenlikner størrelser og uttrykker sammenhengen mellom dem. Velger hensiktsmessige måleenheter og gjennomfører egne undersøkelser."@default .
+d:nivaabeskrivelse069 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade14 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Vurderer sjanse og utfører enkle statistiske beregninger. Bruker symboler for å uttrykke størrelser som er ukjente eller varierer. Kobler sammensatte problemstillinger til kjente løsningsmetoder."@nob , 
+                                 "Vurderer sjanse og utfører enkle statistiske beregninger. Bruker symboler for å uttrykke størrelser som er ukjente eller varierer. Kobler sammensatte problemstillinger til kjente løsningsmetoder."@default .
+d:nivaabeskrivelse070 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade14 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Bruker et variert utvalg problemløsingsstrategier og kan begrunne metodevalg. Uttrykker sammenhenger med ord og bokstavuttrykk."@nob , 
+                                 "Bruker et variert utvalg problemløsingsstrategier og kan begrunne metodevalg. Uttrykker sammenhenger med ord og bokstavuttrykk."@default .
+
+
+# Nivåbeskrivelser for GF4 Å kunne regne, ferdighetsområde 15, Kommunisere
+d:nivaabeskrivelse071 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade15 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Bruker ulike virkemidler for å utrykke enkle beregninger."@nob , 
+                                 "Bruker ulike virkemidler for å utrykke enkle beregninger."@default .
+d:nivaabeskrivelse072 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade15 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Beskriver resultatene ved blant annet å bruke geometriske former, måleenheter, tabeller og grafiske framstillinger."@nob , 
+                                 "Beskriver resultatene ved blant annet å bruke geometriske former, måleenheter, tabeller og grafiske framstillinger."@default .
+d:nivaabeskrivelse073 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade15 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Presenterer resultater fra regneprosesser på en egnet måte ut fra problemstillingen."@nob , 
+                                 "Presenterer resultater fra regneprosesser på en egnet måte ut fra problemstillingen."@default .
+d:nivaabeskrivelse074 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade15 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Setter sammen ulike måter å presentere resultater fra regneprosesser på."@nob , 
+                                 "Setter sammen ulike måter å presentere resultater fra regneprosesser på."@default .
+d:nivaabeskrivelse075 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade15 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Presenterer resultater fra regneprosesser i tekster i ulike fag og i egen hverdag."@nob , 
+                                 "Presenterer resultater fra regneprosesser i tekster i ulike fag og i egen hverdag."@default .
+
+
+
+# Nivåbeskrivelser for GF4 Å kunne regne, ferdighetsområde 16, Reflektere og vurdere
+d:nivaabeskrivelse076 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade16 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Avgjør om et resultat er svar på spørsmålet som ble stilt."@nob , 
+                                 "Avgjør om et resultat er svar på spørsmålet som ble stilt."@default .
+d:nivaabeskrivelse077 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade16 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Vurderer om resultatet er rimelig og tar beslutninger ut fra foreliggende fakta."@nob , 
+                                 "Vurderer om resultatet er rimelig og tar beslutninger ut fra foreliggende fakta."@default .
+d:nivaabeskrivelse078 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade16 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Vurderer prosessen og vurderer om andre fremgangsmåter er mer effektive og enklere å kommunisere."@nob , 
+                                 "Vurderer prosessen og vurderer om andre fremgangsmåter er mer effektive og enklere å kommunisere."@default .
+d:nivaabeskrivelse079 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade16 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Vurderer betydningen resultatet har for den situasjonen det skal brukes i. Drøfter feilkilder og gjør eventuelle justeringer."@nob , 
+                                 "Vurderer betydningen resultatet har for den situasjonen det skal brukes i. Drøfter feilkilder og gjør eventuelle justeringer."@default .
+d:nivaabeskrivelse080 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade16 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF4 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Sammenlikner ulike modeller og vurderer dem i lys av forholdet de beskriver."@nob , 
+                                 "Sammenlikner ulike modeller og vurderer dem i lys av forholdet de beskriver."@default .
+
+
+
+
+
+
+
+
+
+######################################################################################################
+# d:GF1	Muntlige ferdigheter
+# d:GF2	Å kunne skrive
+# d:GF3	Å kunne lese
+# d:GF4	Å kunne regne
+# d:GF5	Digitale ferdigheter
+
+# Frrdighetsbeskrivelser for GF5	Digitale ferdigheter
+
+# Nivåbeskrivelse for d:GF5	Digitale ferdigheter, ferdighetsområde 17, Bruke og forstå
+d:nivaabeskrivelse081 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade17 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Bruker enkel tekst- og bildeformatering og kjenner til noen digitale begreper. Lagrer arbeider på digitale ressurser og følger regler for å beskytte egen digital informasjon."@nob , 
+                                 "Bruker enkel tekst- og bildeformatering og kjenner til noen digitale begreper. Lagrer arbeider på digitale ressurser og følger regler for å beskytte egen digital informasjon."@default .
+d:nivaabeskrivelse082 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade17 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Endrer innstillinger for tekst og bilder og bruker digitale begreper. Navigerer på ulike digitale ressurser og følger regler for å beskytte digitalt utstyr og informasjon."@nob , 
+                                 "Endrer innstillinger for tekst og bilder og bruker digitale begreper. Navigerer på ulike digitale ressurser og følger regler for å beskytte digitalt utstyr og informasjon."@default .
+d:nivaabeskrivelse083 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade17 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Bruker digitale formkrav i egne tekster. Navigerer på digitale ressurser i nettverk og beskytter eget digitalt utstyr og informasjon."@nob , 
+                                 "Bruker digitale formkrav i egne tekster. Navigerer på digitale ressurser i nettverk og beskytter eget digitalt utstyr og informasjon."@default .
+d:nivaabeskrivelse084 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade17 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Følger digitale formkrav tilpasset situasjon og formål. Velger egnede digitale ressurser og har strategier for å beskytte digitalt utstyr og informasjon."@nob , 
+                                 "Følger digitale formkrav tilpasset situasjon og formål. Velger egnede digitale ressurser og har strategier for å beskytte digitalt utstyr og informasjon."@default .
+d:nivaabeskrivelse085 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade17 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Velger og bruker digitale ressurser ut fra behov, digitale formkrav, arbeidsform og mottakere. Vurderer egen digital arbeidsprosess kritisk."@nob , 
+                                 "Velger og bruker digitale ressurser ut fra behov, digitale formkrav, arbeidsform og mottakere. Vurderer egen digital arbeidsprosess kritisk."@default .
+
+
+# Nivåbeskrivelse for d:GF5	Digitale ferdigheter, ferdighetsområde 18, Finne og behandle
+d:nivaabeskrivelse086 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade18 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Gjør enkle søk for å finne informasjon i digitale kilder, og bruker informasjonen i egen læring. Kjenner til enkel digital kildebruk og opphavsrett."@nob , 
+                                 "Gjør enkle søk for å finne informasjon i digitale kilder, og bruker informasjonen i egen læring. Kjenner til enkel digital kildebruk og opphavsrett."@default .
+d:nivaabeskrivelse087 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade18 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Finner, lagrer og gjenfinner informasjon i digitale kilder og refererer til kildene."@nob , 
+                                 "Finner, lagrer og gjenfinner informasjon i digitale kilder og refererer til kildene."@default .
+d:nivaabeskrivelse088 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade18 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Vurderer, organiserer og bruker informasjon fra digitale kilder hensiktsmessig og følger regler for opphavsrett."@nob , 
+                                 "Vurderer, organiserer og bruker informasjon fra digitale kilder hensiktsmessig og følger regler for opphavsrett."@default .
+d:nivaabeskrivelse089 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade18 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Omformer og sammenstiller informasjon fra digitale kilder og vurderer kildene kritisk."@nob , 
+                                 "Omformer og sammenstiller informasjon fra digitale kilder og vurderer kildene kritisk."@default .
+d:nivaabeskrivelse090 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade18 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Tolker og vurderer informasjon fra ulike digitale kilder kritisk og forvalter opphavsrett på egne fremstillinger."@nob , 
+                                 "Tolker og vurderer informasjon fra ulike digitale kilder kritisk og forvalter opphavsrett på egne fremstillinger."@default .
+
+
+# Nivåbeskrivelse for d:GF5	Digitale ferdigheter, ferdighetsområde 19, Produsere og bearbeide
+d:nivaabeskrivelse091 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade19 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Lager enkle digitale produkter. Arbeider og eksperimenterer med tekst, illustrasjoner, bilder og lyd."@nob , 
+                                 "Lager enkle digitale produkter. Arbeider og eksperimenterer med tekst, illustrasjoner, bilder og lyd."@default .
+d:nivaabeskrivelse092 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade19 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Lager digitale produkter med ulike medietyper. Følger instruksjoner i utforming av produkter."@nob , 
+                                 "Lager digitale produkter med ulike medietyper. Følger instruksjoner i utforming av produkter."@default .
+d:nivaabeskrivelse093 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade19 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Lager digitale produkter som kombinerer ulike medietyper. Bruker digitale ressurser til å lage modeller av produkter."@nob , 
+                                 "Lager digitale produkter som kombinerer ulike medietyper. Bruker digitale ressurser til å lage modeller av produkter."@default .
+d:nivaabeskrivelse094 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade19 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Lager og vurderer digitale produkter som kombinerer ulike medietyper. Velger digitale ressurser til å designe og utforme produkter."@nob , 
+                                 "Lager og vurderer digitale produkter som kombinerer ulike medietyper. Velger digitale ressurser til å designe og utforme produkter."@default .
+d:nivaabeskrivelse095 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade19 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Vurderer eget produkt, arbeidsprosess og foreslår forbedringer."@nob , 
+                                 "Vurderer eget produkt, arbeidsprosess og foreslår forbedringer."@default .
+
+
+
+# Nivåbeskrivelse for d:GF5	Digitale ferdigheter, ferdighetsområde 20, Kommunisere og samhandle
+d:nivaabeskrivelse096 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade20 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Bruker enkle digitale ressurser i kommunikasjon og samhandling."@nob , 
+                                 "Bruker enkle digitale ressurser i kommunikasjon og samhandling."@default .
+d:nivaabeskrivelse097 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade20 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Bruker og deler digitale produkter i kommunikasjon og samhandling."@nob , 
+                                 "Bruker og deler digitale produkter i kommunikasjon og samhandling."@default .
+d:nivaabeskrivelse098 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade20 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Tilpasser kommunikasjonsform til digital ressurs. Deltar i ulike digitale samhandlingsprosesser."@nob , 
+                                 "Tilpasser kommunikasjonsform til digital ressurs. Deltar i ulike digitale samhandlingsprosesser."@default .
+d:nivaabeskrivelse099 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade20 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Velger digital ressurs for kommunikasjon ut fra formål og mottaker. Velger digital samhandlingsressurs ut fra arbeidsform."@nob , 
+                                 "Velger digital ressurs for kommunikasjon ut fra formål og mottaker. Velger digital samhandlingsressurs ut fra arbeidsform."@default .
+d:nivaabeskrivelse100 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade20 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Velger og vurderer digital ressurs for kommunikasjon ut fra ulike faglige behov. Fyller ulike roller i en digital samhandlings- prosess."@nob , 
+                                 "Velger og vurderer digital ressurs for kommunikasjon ut fra ulike faglige behov. Fyller ulike roller i en digital samhandlings- prosess."@default .
+
+# Nivåbeskrivelse for d:GF5	Digitale ferdigheter, ferdighetsområde 21, Utøve digital dømmekraft
+d:nivaabeskrivelse101 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa1 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade21 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "1"^^xsd:integer ;
+                   u:beskrivelse "Følger regler for digital samhandling og personvern på nett."@nob , 
+                                 "Følger regler for digital samhandling og personvern på nett."@default .
+d:nivaabeskrivelse102 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa2 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade21 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "2"^^xsd:integer ;
+                   u:beskrivelse "Følger regler for personvern og viser hensyn til andre på nett."@nob , 
+                                 "Følger regler for personvern og viser hensyn til andre på nett."@default .
+d:nivaabeskrivelse103 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa3 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade21 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "3"^^xsd:integer ;
+                   u:beskrivelse "Opptrer etisk og forsvarlig på nett, og bruker strategier for å unngå uønskete hendelser."@nob , 
+                                 "Opptrer etisk og forsvarlig på nett, og bruker strategier for å unngå uønskete hendelser."@default .
+d:nivaabeskrivelse104 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa4 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade21 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "4"^^xsd:integer ;
+                   u:beskrivelse "Viser evne til etisk refleksjon og vurdering av egen rolle på nett og i sosiale medier."@nob , 
+                                 "Viser evne til etisk refleksjon og vurdering av egen rolle på nett og i sosiale medier."@default .
+d:nivaabeskrivelse105 a u:nivaabeskrivelse ;
+                   owl:Class u:nivaabeskrivelse ;
+                   u:tilhoerer-ferdighetsnivaa d:ferdighetsnivaa5 ;
+                   u:tilhoer-ferdighetsomraade d:ferdighetsomraade21 ;
+                   u:tilhoerer-grunnleggende-ferdighet d:GF5 ;
+                   u:rekkefoelge "5"^^xsd:integer ;
+                   u:beskrivelse "Forvalter egen digital identitet og respekterer andres i tråd med gjeldende regelverk."@nob , 
+                                 "Forvalter egen digital identitet og respekterer andres i tråd med gjeldende regelverk."@default .
+
+###  http://psi.udir.no/kl06/merknadstype_fagmerknad
+# d:merknadstype_fagmerknad rdf:type owl:NamedIndividual .
+
+
+###  http://psi.udir.no/kl06/merknadstype_vitnemaalsmerknad
+# d:merknadstype_vitnemaalsmerknad rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
