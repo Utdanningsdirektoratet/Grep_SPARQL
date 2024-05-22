@@ -12,10 +12,10 @@
 <http://psi.udir.no/ontologi/kl06/> rdf:type owl:Ontology ;
                                      rdfs:comment "Ontologi for Grep – den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen i Norge"@nb ,
                                                   "Ontology for Grep (\"grip\"@en) – the national database for subjects, curricula and training offers in basic education in Norway"@en ;
-                                     rdfs:label "OWL for Grep (draw)"@en ,
+                                     rdfs:label "OWL for Grep (draft)"@en ,
                                                 "OWL for Grep (utkast)"@nb ;
-                                     rdfs:seeAlso <https://github.com/Utdanningsdirektoratet/KL06-LK20-public/wiki/> ,
-                                                  <https://github.com/Utdanningsdirektoratet/KL06-LK20-public/wiki/engHome> .
+                                     rdfs:seeAlso <https://github.com/Utdanningsdirektoratet/Grep_SPARQL/wiki> ,
+                                                  <https://github.com/Utdanningsdirektoratet/KL06-LK20-public/wiki/> .
 
 #################################################################
 #    Datatypes
