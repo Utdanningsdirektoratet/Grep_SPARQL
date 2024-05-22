@@ -948,7 +948,7 @@ u:forklaring rdf:type owl:DatatypeProperty ;
              rdfs:comment "Attribute for kjerneelement_lk20 (core-element_lk20) and kompetansemaal_lk20 (competence-aim-lk20) for keeping a pedagogical text that is not part of the regulatory text, but written by the curriculum authors or those who manage the curriculum"@en ,
                           "Egenskap for kjerneelement_lk20 og kompetansemaal_lk20 for å holde en pedagogisk tekst som ikke er en del av forskrifsteksten, men skrevet av læreplanforfatterne eller de som forvalter læreplanen"@nb ;
              rdfs:label "explanation"@en ,
-                        "forklaring"@en .
+                        "forklaring"@nb .
 
 
 ###  http://psi.udir.no/ontologi/kl06/formaal
@@ -2136,7 +2136,7 @@ u:Trekkordning rdf:type owl:Class ;
 ###  http://psi.udir.no/ontologi/kl06/Tverrfaglig_tema_lk20
 u:Tverrfaglig_tema_lk20 rdf:type owl:Class ;
                         rdfs:comment "Element describing each of the three prioritized topics \"Health and life skills\", \"Democracy and citizenship\" and \"Sustainability\" (occurs in the individual curricula where they are considered relevant for the subject, and has its own subject-specific description)"@en ,
-                                     "Element som beskriver hver av de tre prioriterte temaene folkehelse og lvsmestring, demokrati og medborgerskap og bærekraftig utvikling (forekommer i de enkelte læreplanene der de er ansett som aktuelle for for faget, og har der sin egen fagspesifikke beskrivelse)"@en ;
+                                     "Element som beskriver hver av de tre prioriterte temaene folkehelse og lvsmestring, demokrati og medborgerskap og bærekraftig utvikling (forekommer i de enkelte læreplanene der de er ansett som aktuelle for for faget, og har der sin egen fagspesifikke beskrivelse)"@nb ;
                         rdfs:label "Interdisciplinary topic"@en ,
                                    "Tverrfaglig tema"@nb .
 
@@ -2146,7 +2146,7 @@ u:Utdanningsprogram rdf:type owl:Class ;
                     rdfs:comment "Educational pathway in upper secondary education leading to university and college admissions certification and or vocational qualifications or trade- or journeyman's certificate (certificate awarded on successful completion of a vocational training course, and entitling the holder to practice the trade concerned) cf. Circular Udir-1-[a given year]"@en ,
                                  "Utdanningsløp i videregående utdanning som fører fram til studie- og eller yrkeskompetanse/fag- eller svennebrev jf. Rundskriv Udir-1-[et gitt årstall]"@nb ;
                     rdfs:label "Eeducation programme"@en ,
-                               "Utdanningsprogram"@en .
+                               "Utdanningsprogram"@nb .
 
 
 ###  http://psi.udir.no/ontologi/kl06/Utdanningsprogramtype
