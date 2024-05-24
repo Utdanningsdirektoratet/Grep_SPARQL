@@ -2146,7 +2146,7 @@ u:Utdanningsprogram rdf:type owl:Class ;
                     rdfs:comment "Educational pathway in upper secondary education leading to university and college admissions certification and or vocational qualifications or trade- or journeyman's certificate (certificate awarded on successful completion of a vocational training course, and entitling the holder to practice the trade concerned) cf. Circular Udir-1-[a given year]"@en ,
                                  "Utdanningsløp i videregående utdanning som fører fram til studie- og eller yrkeskompetanse/fag- eller svennebrev jf. Rundskriv Udir-1-[et gitt årstall]"@nb ;
                     rdfs:label "Eeducation programme"@en ,
-                               "Utdanningsprogram"@en .
+                               "Utdanningsprogram"@nb .
 
 
 ###  http://psi.udir.no/ontologi/kl06/Utdanningsprogramtype
