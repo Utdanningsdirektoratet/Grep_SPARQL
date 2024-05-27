@@ -433,9 +433,9 @@ u:opplaaeringssted rdf:type owl:ObjectProperty ;
 u:opplaeringsfag rdf:type owl:ObjectProperty ;
                  rdfs:domain u:fagkode ;
                  rdfs:range u:opplaeringsfag ;
-                 rdfs:label "Attribute for 'fagkode' (subject code) to define what a group of learners at a given grade should be taught"@en ,
-                            "Egenskap for fagkode for å angi hva en gruppe elever/lærlinger/praksiskandidater/deltakere på et gitt årstrinn skal undervises i"@nb ,
-                            "opplæringsfag"@nb ,
+                 rdfs:comment "Attribute for 'fagkode' (subject code) to define what a group of learners at a given grade should be taught"@en ,
+                            "Egenskap for fagkode for å angi hva en gruppe elever/lærlinger/praksiskandidater/deltakere på et gitt årstrinn skal undervises i"@nb ;
+                 rdfs:label "opplæringsfag"@nb ,
                             "teaching subject"@en .
 
 
