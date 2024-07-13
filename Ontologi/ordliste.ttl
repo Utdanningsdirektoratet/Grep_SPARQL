@@ -1,5 +1,5 @@
 @prefix o: <http://psi.udir.no/ontologi/ord/> .
-@prefix a: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix a: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
 o:0001 a:ord "abstraksjonsnivå"@nob, "level of abstraction"@eng .
 o:0002 a:ord "adaptiv prøve"@nob, "adaptive test"@eng .
 o:0003 a:ord "additiv indeks"@nob, "additive index"@eng .
