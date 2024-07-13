@@ -1,4 +1,4 @@
-@prefix o: <http://psi.udir.no/ontologi/> .
+@prefix o: <http://psi.udir.no/ontologi/ord/> .
 o:0001 a o:ord ; o:oppslag "abstraksjonsnivå"@nob, "level of abstraction"@eng .
 o:0002 a o:ord ; o:oppslag "adaptiv prøve"@nob, "adaptive test"@eng .
 o:0003 a o:ord ; o:oppslag "additiv indeks"@nob, "additive index"@eng .
