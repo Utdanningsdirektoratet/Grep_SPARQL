@@ -19700,10 +19700,17 @@ o:3236 a o:entry ;
     o:id o:3236 ;
     o:source <https://www.samordnaopptak.no/info/opptak/opptak-uhg/generell-studiekompetanse/studiekompetansefagene/> ;
     o:source-date "2024-07-18T00:13:00"^^xsd:dateTime ;
-    o:word "de 6 obligatoriske studiekompetansefagene"@nob, "six-packen"@nob,
-        "the six subjects required for university and college admission"@eng, "the six-pack"@en ;
-    rdfs:comment "Alle må ha de seks studiekompetansefagene for å få generell studiekompetanse. Du må enten ha dem som en del av vidaregende skole, eller i tillegg til praksis etter 23/5-regelen (s.d). De seks studiekompetansefagene er:Norsk – hovedmål, sidemål og muntlig (393 årstimer), Engelsk (140 årstimer), Historie (140 årstimer), Sammfunnskunnskap (84 årstimer), Matematikk (224 årstimer) og Naturfag (140 årstimer)"@nob,
+    o:word "de 6 obligatoriske studiekompetansefagene"@nob ,
+        "the six subjects required for university and college admission"@eng ;
+    rdfs:comment "Alle må ha de seks studiekompetansefagene for å få generell studiekompetanse. Du må enten ha dem som en del av vidaregende skole, eller i tillegg til praksis etter 23/5-regelen (s.d). De seks studiekompetansefagene er:Norsk – hovedmål, sidemål og muntlig (393 årstimer), Engelsk (140 årstimer), Historie (140 årstimer), Sammfunnskunnskap (84 årstimer), Matematikk (224 årstimer) og Naturfag (140 årstimer)"@nob, 
         "Everyone must have the six subjects required for university and college admission to obtain a general university entrance qualification. You must either have them as part of the upper secondary school or in addition to work experience according to the 23/5 rule (cf.). The six subjects required for university and college admission are: Norwegian – first- and second-choice form of Norwegian, and oral (393 teaching hours p.a.), English (140 teaching hours p.a.), History (140 teaching hours p.a.), Social Science (84 teaching hours p.a.),Mathematics (224 teaching hours p.a.) and Natural science (140 teaching hours p.a.)"@eng .
+
+o:3236b a o:entry ;
+    o:id o:3236b ;
+    o:word "six-packen"@nob,
+        "The six-pack"@eng ;
+    rdfs:comment "Se \"de 6 obligatoriske studiekompetansefagene\""@nob,
+        "See \"the six subjects required for university and college admission\""@eng .
 
 o:3237 a o:entry ;
     o:id o:3237 ;
