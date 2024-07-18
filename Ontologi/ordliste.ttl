@@ -19587,7 +19587,7 @@ o:3224 a o:entry ;
         "Candidate to experience-based trade certification"@eng ;
     rdfs:comment "Ordning for voksne som kan dokumentere lang og allsidig yrkespraksis. Ordningen er ikke en opplæringsordning, men en rett til å melde seg til fag- eller svenneprøve uten opplæring i skole og læretid i bedrift."@nob,
         "Scheme for adults who can document long and versatile professional experience. The scheme is not a training scheme, but a right to register for a trade or journeyman's examination without training in school and an apprenticeship in a company."@eng .
----
+
 o:3225 a o:entry ;
     o:id o:3225 ;
     o:source <https://www.udir.no/eksamen-og-prover/dokumentasjon/realkompetansevurdering/> ;
