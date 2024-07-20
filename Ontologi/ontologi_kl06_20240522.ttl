@@ -948,7 +948,7 @@ u:forklaring rdf:type owl:DatatypeProperty ;
              rdfs:comment "Attribute for kjerneelement_lk20 (core-element_lk20) and kompetansemaal_lk20 (competence-aim-lk20) for keeping a pedagogical text that is not part of the regulatory text, but written by the curriculum authors or those who manage the curriculum"@en ,
                           "Egenskap for kjerneelement_lk20 og kompetansemaal_lk20 for å holde en pedagogisk tekst som ikke er en del av forskrifsteksten, men skrevet av læreplanforfatterne eller de som forvalter læreplanen"@nb ;
              rdfs:label "explanation"@en ,
-                        "forklaring"@en .
+                        "forklaring"@nb .
 
 
 ###  http://psi.udir.no/ontologi/kl06/formaal
